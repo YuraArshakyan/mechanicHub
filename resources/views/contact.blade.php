@@ -22,14 +22,14 @@
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="js/html5shiv.js"></script>
     <![endif]-->
-    
+
 </head>
 <body>
 <div class="boxed_wrapper">
 
 <!--Start Preloader -->
 <div class="preloader"></div>
-<!--End Preloader --> 
+<!--End Preloader -->
 
 <!--Start top bar area-->
 <section class="top-bar-area">
@@ -39,9 +39,9 @@
                 <div class="top-left">
                     <ul class="top-contact-info">
                         <li>Got any Problems?</li>
-                        <li><span class="flaticon-phone-receiver"></span>Phone +44 567 890123</li>    
-                        <li><span class="flaticon-envelope"></span>Mail@MechanicHub.com</li>     
-                    </ul>   
+                        <li><span class="flaticon-phone-receiver"></span>Phone +44 567 890123</li>
+                        <li><span class="flaticon-envelope"></span>Mail@MechanicHub.com</li>
+                    </ul>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
@@ -61,7 +61,7 @@
         </div>
     </div>
 </section>
-<!--End top bar area-->  
+<!--End top bar area-->
 
 <!--Start mainmenu area-->
 <section class="mainmenu-area stricky">
@@ -77,7 +77,7 @@
                 <!--End logo-->
                 <!--Start mainmenu-->
                 <nav class="main-menu pull-left">
-                    <div class="navbar-header">   	
+                    <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -159,9 +159,9 @@
                             </li>
                         </ul>
                     </div>
-                </div> 
+                </div>
                 <!--End mainmenu right box-->
-            </div>   
+            </div>
         </div>
     </div>
 </section>
@@ -171,19 +171,19 @@
 <section class="contact-map-area">
     <div class="container-fluid">
         <div class="google-map-inner">
-            <div 
-                class="google-map" 
-                id="contact-google-map" 
-                data-map-lat="44.529688" 
-                data-map-lng="-72.933009" 
-                data-icon-path="images/resources/map-marker.png" 
-                data-map-title="Brooklyn, New York, United Kingdom" 
-                data-map-zoom="12" 
+            <div
+                class="google-map"
+                id="contact-google-map"
+                data-map-lat="4.529688"
+                data-map-lng="-2.933009"
+                data-icon-path="images/resources/map-marker.png"
+                data-map-title="Brooklyn, New York, United Kingdom"
+                data-map-zoom="12"
                 data-markers='{
-                    "marker-1": [44.529688, -72.933009, "<h4>Head Office</h4><p>44/77 Alabama, a western U.S.A</p>"]
+                    "marker-1": [4.529688, -2.933009, "<h4>Head Office</h4><p>44/77 Alabama, a western U.S.A</p>"]
                 }'>
             </div>
-        </div>  
+        </div>
     </div>
 </section>
 <!--End contact map area-->
@@ -196,13 +196,13 @@
             <div class="col-md-4">
                 <div class="single-item hvr-grow-shadow text-center">
                     <div class="icon-holder">
-                        <span class="flaticon-magnifying-glass"></span>    
-                    </div> 
+                        <span class="flaticon-magnifying-glass"></span>
+                    </div>
                     <div class="text-holder">
                         <h3>Visit Our Place</h3>
                         <span class="border"></span>
                         <p>241/84 MechanicHub Discover Street<br> New York, NY 10012, USA</p>
-                    </div>  
+                    </div>
                 </div>
             </div>
             <!--End single item-->
@@ -210,13 +210,13 @@
             <div class="col-md-4">
                 <div class="single-item hvr-grow-shadow text-center">
                     <div class="icon-holder">
-                        <span class="flaticon-telephone"></span>    
-                    </div> 
+                        <span class="flaticon-telephone"></span>
+                    </div>
                     <div class="text-holder">
                         <h3>Quick Contact</h3>
                         <span class="border"></span>
                         <p>Ph: +321 456 78 9012<br> Email: Info@Mechanichub.com</p>
-                    </div>  
+                    </div>
                 </div>
             </div>
             <!--End single item-->
@@ -224,16 +224,16 @@
             <div class="col-md-4">
                 <div class="single-item hvr-grow-shadow text-center">
                     <div class="icon-holder">
-                        <span class="flaticon-transport"></span>    
-                    </div> 
+                        <span class="flaticon-transport"></span>
+                    </div>
                     <div class="text-holder">
                         <h3>Tow - Truck</h3>
                         <span class="border"></span>
                         <p>We have Truck Tow service also, our team<br> ready to help you 24/7.</p>
-                    </div>  
+                    </div>
                 </div>
             </div>
-            <!--End single item-->           
+            <!--End single item-->
         </div>
     </div>
 </section>
@@ -279,7 +279,7 @@
                                         <button class="thm-btn bgclr-1" type="submit" data-loading-text="Please wait...">send message</button>
                                     </div>
                                 </div>
-                            </form>  
+                            </form>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-5">
@@ -299,7 +299,7 @@
                             </ul>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -307,7 +307,7 @@
 </section>
 <!--End contact form area-->
 
-<!--Start footer area-->  
+<!--Start footer area-->
 <footer class="footer-area">
     <div class="container">
         <div class="row">
@@ -323,7 +323,7 @@
                         <p>Mechanic HUB  was founded in 1998. Delivering the highest degree of customer satisfaction through superior workmanship and service. Car owners often lack visibility regarding the quality and price.</p>
                         <a class="thm-btn" href="#">Get quote now</a>
                     </div>
-                    
+
                 </div>
             </div>
             <!--End single footer widget-->
@@ -416,7 +416,7 @@
             <!--End single footer widget-->
         </div>
     </div>
-</footer>   
+</footer>
 <!--End footer area-->
 
 <!--Start footer bottom area-->
@@ -425,7 +425,7 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="copyright-text">
-                    <p>Copyright @ 2017 <a href="#">Steelthemes</a>, All Right Reserved</p> 
+                    <p>Copyright @ 2017 <a href="#">Steelthemes</a>, All Right Reserved</p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -465,7 +465,7 @@
 <!-- easing -->
 <script src="js/jquery.easing.min.js"></script>
 <!-- gmap helper -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHzPSV2jshbjI8fqnC_C4L08ffnj5EN3A"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"></script>
 <!--gmap script-->
 <script src="js/gmaps.js"></script>
 <script src="js/map-helper.js"></script>
@@ -474,12 +474,12 @@
 <script src="js/jquery.appear.js"></script>
 <!-- isotope script-->
 <script src="js/isotope.js"></script>
-<script src="js/jquery.prettyPhoto.js"></script> 
+<script src="js/jquery.prettyPhoto.js"></script>
 <script src="js/jquery.bootstrap-touchspin.js"></script>
 <!-- jQuery timepicker js -->
 <script src="assets/timepicker/timePicker.js"></script>
 <!-- Bootstrap select picker js -->
-<script src="assets/bootstrap-sl-1.12.1/bootstrap-select.js"></script>                               
+<script src="assets/bootstrap-sl-1.12.1/bootstrap-select.js"></script>
 <!-- Bootstrap bootstrap touchspin js -->
 <!-- jQuery ui js -->
 <script src="assets/jquery-ui-1.11.4/jquery-ui.js"></script>

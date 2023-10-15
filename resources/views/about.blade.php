@@ -1,173 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>About || MechanicHub || Responsive HTML 5 Template</title>
-
-	<!-- responsive meta -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- For IE -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<!-- master stylesheet -->
-	<link rel="stylesheet" href="css/style.css">
-	<!-- Responsive stylesheet -->
-	<link rel="stylesheet" href="css/responsive.css">
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
-
-    <!-- Fixing Internet Explorer-->
-    <!--[if lt IE 9]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script src="js/html5shiv.js"></script>
-    <![endif]-->
-    
-</head>
+@include('common.header')
 <body>
 <div class="boxed_wrapper">
 
 <!--Start Preloader -->
 <div class="preloader"></div>
-<!--End Preloader --> 
+<!--End Preloader -->
 
 <!--Start top bar area-->
-<section class="top-bar-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                <div class="top-left">
-                    <ul class="top-contact-info">
-                        <li>Got any Problems?</li>
-                        <li><span class="flaticon-phone-receiver"></span>Phone +44 567 890123</li>    
-                        <li><span class="flaticon-envelope"></span>Mail@MechanicHub.com</li>     
-                    </ul>   
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                <div class="top-right">
-                    <ul class="social-links pull-left">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                    </ul>
-                    <div class="appoinment-button pull-right">
-                        <a href="#">Make a Appoinment</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--End top bar area-->  
+@include('common.1.topbar')
+<!--End top bar area-->
 
 <!--Start mainmenu area-->
-<section class="mainmenu-area stricky">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 clearfix">
-                <!--Start logo-->
-                <div class="logo pull-left">
-                    <a href="index.html">
-                        <img src="images/resources/logo.png" alt="Awesome Logo">
-                    </a>
-                </div>
-                <!--End logo-->
-                <!--Start mainmenu-->
-                <nav class="main-menu pull-left">
-                    <div class="navbar-header">   	
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                    <div class="navbar-collapse collapse clearfix">
-                        <ul class="navigation clearfix">
-                            <li class="dropdown"><a href="index.html">Home</a>
-                                <ul>
-                                    <li><a href="index.html">Home One</a></li>
-                                    <li><a href="index-2.html">Home Two</a></li>
-                                    <li><a href="index-3.html">Home Three</a></li>
-                                    <li><a href="index-4.html">Home Four</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown current"><a href="about.html">About us</a>
-                                <ul>
-                                    <li><a href="about.html">About Mechanichub</a></li>
-                                    <li><a href="team.html">Meet Our Experts</a></li>
-                                    <li><a href="pricing.html">Pricing Table</a></li>
-                                    <li><a href="testimonials.html">Customer Reviews</a></li>
-                                    <li><a href="faq.html">FAQ’s</a></li>
-                                    <li><a href="404.html">404 Page</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown"><a href="services.html">Services</a>
-                                <ul>
-                                    <li><a href="services.html">View All Services</a></li>
-                                    <li><a href="ser-single1-wheel-works.html">Wheel Works</a></li>
-                                    <li><a href="ser-single2-painting-works.html">Painting Works</a></li>
-                                    <li><a href="ser-single3-air-conditioner.html">Air Conditioner</a></li>
-                                    <li><a href="ser-single4-water-service.html">Water Service</a></li>
-                                    <li><a href="ser-single5-engine-works.html">Engine Works</a></li>
-                                    <li><a href="ser-single6-lube-oil-filters.html">lube Oil & Filters</a></li>
-                                    <li><a href="ser-single7-brake-repairs.html">Brake Repairs</a></li>
-                                    <li><a href="ser-single8-belts-hoses.html">Belts & Hoses</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown"><a href="gallery.html">Gallery</a>
-                                <ul>
-                                    <li><a href="gallery.html">Fullwidth Gallery</a></li>
-                                    <li><a href="gallery-single.html">Gallery Single</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown"><a href="blog-grid.html">Blog</a>
-                                <ul>
-                                    <li><a href="blog-grid.html">Blog Grid Layout</a></li>
-                                    <li><a href="blog-with-sidebar.html">Blog With Sidebar</a></li>
-                                    <li><a href="blog-single.html">Blog Single Post</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown"><a href="shop.html">Shop</a>
-                                <ul>
-                                    <li><a href="shop.html">Shop Products</a></li>
-                                    <li><a href="shop-single.html">Products Single</a></li>
-                                    <li><a href="shopping-cart.html">Shopping Cart</a></li>
-                                    <li><a href="checkout.html">Checkout</a></li>
-                                    <li><a href="account.html">My Account</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="contact.html">Contact Us</a></li>
-                        </ul>
-                    </div>
-                </nav>
-                <!--End mainmenu-->
-                <!--Start mainmenu right box-->
-                <div class="mainmenu-right-box pull-right">
-                    <div class="outer-search-box">
-                        <div class="seach-toggle"><i class="fa fa-search"></i></div>
-                        <ul class="search-box">
-                            <li>
-                                <form method="post" action="index.html">
-                                    <div class="form-group">
-                                        <input type="search" name="search" placeholder="Search Here" required>
-                                        <button type="submit"><i class="fa fa-search"></i></button>
-                                    </div>
-                                </form>
-                            </li>
-                        </ul>
-                    </div>
-                </div> 
-                <!--End mainmenu right box-->
-            </div>   
-        </div>
-    </div>
-</section>
+@include('common.1.mainmenue')
 <!--End mainmenu area-->
 
-<!--Start breadcrumb area-->     
+<!--Start breadcrumb area-->
 <section class="breadcrumb-area" style="background-image: url(images/resources/breadcrumb-bg.jpg);">
 	<div class="container">
 	    <div class="row">
@@ -186,56 +35,16 @@
                         <li><a href="index.html">Home</a></li>
                         <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
                         <li class="active">About Us</li>
-                    </ul>   
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<!--End breadcrumb area--> 
+<!--End breadcrumb area-->
 
 <!--Start call to action area-->
-<section class="welcome-area sec-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="text-holder">
-                    <div class="sec-title">
-                        <h1>Welcome to Mechanic <span>HUB</span></h1>
-                        <span class="border"></span>
-                     </div> 
-                    <div class="text-box">
-                        <p>Mechanic HUB  was founded in 1998. Dealing with car problems is not only a time-consuming and frustrating experience, it is often expensive. Car owners often lack visibility regarding the quality of mechanics of price.</p>
-                        <p>We provide a full and detailed estimate of all restoration and repair projects in advance. Clients are then kept fully updated and notified of any unavoidable changes throughout the process. Delivering the highest degree of customer satisfaction through superior workmanship and service</p>
-                        <div class="name-signature">
-                            <div class="name">
-                                <h3>lara Crofta, <span>Founder</span></h3>
-                                <p>Mechanic HUB.</p>
-                            </div>
-                            <div class="signature">
-                                <img src="images/icon/signature.png" alt="Signature">    
-                            </div>    
-                        </div>
-                    </div>
-                     
-                </div>
-            </div> 
-            <div class="col-md-6">
-                <div class="video-holder">
-                    <img src="images/resources/video-gallery.jpg" alt="Awesome Video Gallery">
-                    <div class="overlay-gallery">
-                        <div class="icon-holder">
-                            <div class="icon">
-                                <a class="html5lightbox" title="MechanicHub Video Gallery" href="https://www.youtube.com/watch?v=nFtbf4prm78"><img src="images/icon/play-btn.png" alt="Play Button"></a>   
-                            </div>
-                        </div>    
-                    </div>
-                </div>
-            </div>
-               
-        </div>
-    </div>
-</section>
+@include('common.about')
 <!--End call to action area-->
 
 <!--Start contact info area-->
@@ -251,11 +60,11 @@
                 <div class="single-box">
                     <div class="top">
                         <h3><span class="flaticon-telephone"></span> 24/7 Customer Support</h3>
-                    </div> 
+                    </div>
                     <div class="text">
                         <h1>1800-456-789</h1>
                         <p>MechanicHub is your ONE STOP solution bringing best car services.</p>
-                    </div>   
+                    </div>
                 </div>
             </div>
             <!--End single box-->
@@ -264,12 +73,12 @@
                 <div class="single-box">
                     <div class="top">
                         <h3><span class="flaticon-clock"></span> Working Hours</h3>
-                    </div> 
+                    </div>
                     <ul class="working-hour">
                         <li>Week Days : <span>09:00am - 08:00pm</span></li>
                         <li>Satday : <span>10:00am - 06:00pm</span></li>
                         <li>Sunday : <span><b>Closed</b></span></li>
-                    </ul>  
+                    </ul>
                 </div>
             </div>
             <!--End single box-->
@@ -278,20 +87,20 @@
                 <div class="single-box">
                     <div class="top">
                         <h3><span class="flaticon-telephone"></span> 24/7 Customer Support</h3>
-                    </div> 
+                    </div>
                     <div class="newsletter-form">
                         <form action="#">
                             <input type="email" name="email" placeholder="Email address">
                             <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                         </form>
                         <p>* Your Mail id is Fully Protected.</p>
-                    </div>  
+                    </div>
                 </div>
             </div>
-            <!--End single box-->        
+            <!--End single box-->
         </div>
     </div>
-</section> 
+</section>
 <!--End contact info area-->
 
 <!--Start choosing area-->
@@ -312,7 +121,7 @@
                         <h3>100% Transparency</h3>
                         <p>We ensure that you get well detailed break-up of each repair work.</p>
                         <a href="#">Read More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                    </div>    
+                    </div>
                 </div>
             </div>
             <!--End single industry expertise item-->
@@ -326,7 +135,7 @@
                         <h3>Genuine Spare Parts</h3>
                         <p>We useuthorzed genine spare parts & accessories to ensure.</p>
                         <a href="#">Read More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                    </div>    
+                    </div>
                 </div>
             </div>
             <!--End single industry expertise item-->
@@ -340,7 +149,7 @@
                         <h3>Quality Services</h3>
                         <p>You can avail our free pickup & drop so that you can just sit & relax.</p>
                         <a href="#">Read More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                    </div>    
+                    </div>
                 </div>
             </div>
             <!--End single industry expertise item-->
@@ -356,7 +165,7 @@
                         <h3>Friendly & Helpfull</h3>
                         <p>Friendly & helpful professinal group of people in Mechanichub.</p>
                         <a href="#">Read More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                    </div>    
+                    </div>
                 </div>
             </div>
             <!--End single industry expertise item-->
@@ -370,7 +179,7 @@
                         <h3>Free Pickup & Drop</h3>
                         <p>You can avail our free pickup & drop so that you can just sit & relax.</p>
                         <a href="#">Read More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                    </div>    
+                    </div>
                 </div>
             </div>
             <!--End single industry expertise item-->
@@ -384,13 +193,13 @@
                         <h3>Zero Upselling</h3>
                         <p>You can see servicing cost upfront our Service Calculator.</p>
                         <a href="#">Read More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                    </div>    
+                    </div>
                 </div>
             </div>
             <!--End single industry expertise item-->
-        </div>    
-    </div>    
-</section>        
+        </div>
+    </div>
+</section>
 <!--End choosing area-->
 
 <!--Start slogan area-->
@@ -409,141 +218,11 @@
             </div>
         </div>
     </div>
-</section>  
-<!--End slogan area-->  
-  
-<!--Start footer area-->  
-<footer class="footer-area">
-    <div class="container">
-        <div class="row">
-            <!--Start single footer widget-->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                <div class="single-footer-widget martop-minus pd-bottom50">
-                    <div class="footer-logo">
-                        <a href="index.html">
-                            <img src="images/footer/footer-logo.png" alt="Awesome Footer Logo">
-                        </a>
-                    </div>
-                    <div class="our-info">
-                        <p>Mechanic HUB  was founded in 1998. Delivering the highest degree of customer satisfaction through superior workmanship and service. Car owners often lack visibility regarding the quality and price.</p>
-                        <a class="thm-btn" href="#">Get quote now</a>
-                    </div>
-                    
-                </div>
-            </div>
-            <!--End single footer widget-->
-            <!--Start single footer widget-->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                <div class="single-footer-widget pd-bottom50">
-                    <div class="title">
-                        <h3>Latest Blog Post</h3>
-                    </div>
-                    <ul class="latest-blog">
-                        <li>
-                            <div class="text-holder">
-                                <a href="#">Find latest news about our new and used car for easy to choose best one.</a>
-                                <span><i class="fa fa-clock-o" aria-hidden="true"></i>Aug 21, 2015</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="text-holder">
-                                <a href="#">Car kids grill the car experts, Esspecially intoduced for childrens.</a>
-                                <span><i class="fa fa-clock-o" aria-hidden="true"></i>July 17, 2015</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!--End single footer widget-->
-            <!--Start single footer widget-->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                <div class="single-footer-widget mar-bottom">
-                    <div class="title">
-                        <h3>Get In Contact</h3>
-                    </div>
-                    <ul class="footer-contact-info">
-                        <li>
-                            <div class="icon-holder">
-                                <span class="flaticon-maps-and-flags"></span>
-                            </div>
-                            <div class="text-holder">
-                                <h5>Rock St 12, Newyork City, USA</h5>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icon-holder">
-                                <span class="flaticon-phone-receiver"></span>
-                            </div>
-                            <div class="text-holder">
-                                <h5>Phone +44 567 890123</h5>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icon-holder">
-                                <span class="flaticon-envelope"></span>
-                            </div>
-                            <div class="text-holder">
-                                <h5>Mail@MechanicHub.com</h5>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icon-holder">
-                                <span class="flaticon-fax"></span>
-                            </div>
-                            <div class="text-holder">
-                                <h5>(526) 326-985-7423</h5>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="map">
-                        <a href="#">Find Us On Map</a>
-                    </div>
-                </div>
-            </div>
-            <!--Start single footer widget-->
-            <!--Start single footer widget-->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                <div class="single-footer-widget clearfix">
-                    <div class="title">
-                        <h3>Working Hours</h3>
-                    </div>
-                    <ul class="working-hours">
-                        <li>Monday: <span>9:30 am - 6.00 pm</span></li>
-                        <li>Tuesday: <span>9:30 am - 6.00 pm</span></li>
-                        <li>Wednesday: <span>9:30 am - 6.00 pm</span></li>
-                        <li>Thursday: <span>9:30 am - 6.00 pm</span></li>
-                        <li>Friday: <span>9:30 am - 6.00 pm</span></li>
-                        <li>Saturday: <span>9:30 am - 6.00 pm</span></li>
-                        <li>Sunday: <span class="closed">Closed</span></li>
-                    </ul>
-                </div>
-            </div>
-            <!--End single footer widget-->
-        </div>
-    </div>
-</footer>   
-<!--End footer area-->
-
-<!--Start footer bottom area-->
-<section class="footer-bottom-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="copyright-text">
-                    <p>Copyright @ 2017 <a href="#">Steelthemes</a>, All Right Reserved</p> 
-                </div>
-            </div>
-            <div class="col-md-4">
-                <ul class="footer-social-links">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
 </section>
+<!--End slogan area-->
+
+<!--Start footer area-->
+@include('common.footer')
 <!--End footer bottom area-->
 
 </div>
@@ -579,12 +258,12 @@
 <script src="js/jquery.appear.js"></script>
 <!-- isotope script-->
 <script src="js/isotope.js"></script>
-<script src="js/jquery.prettyPhoto.js"></script> 
+<script src="js/jquery.prettyPhoto.js"></script>
 <script src="js/jquery.bootstrap-touchspin.js"></script>
 <!-- jQuery timepicker js -->
 <script src="assets/timepicker/timePicker.js"></script>
 <!-- Bootstrap select picker js -->
-<script src="assets/bootstrap-sl-1.12.1/bootstrap-select.js"></script>                               
+<script src="assets/bootstrap-sl-1.12.1/bootstrap-select.js"></script>
 <!-- Bootstrap bootstrap touchspin js -->
 <!-- jQuery ui js -->
 <script src="assets/jquery-ui-1.11.4/jquery-ui.js"></script>

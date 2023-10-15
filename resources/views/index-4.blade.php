@@ -554,3 +554,4 @@
     <!--End footer bottom area-->
     @include('common.footer')
     <!--Start footer area-->
+</div>
