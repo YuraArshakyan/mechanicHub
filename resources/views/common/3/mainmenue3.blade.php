@@ -43,12 +43,13 @@
                                     <li><a href="{{route('ser-single', 8)}}">Belts & Hoses</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a href="gallery.html">Gallery</a>
-                                <ul>
-                                    <li><a href="gallery.html">Fullwidth Gallery</a></li>
-                                    <li><a href="gallery-single.html">Gallery Single</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="{{route('gallery')}}">Gallery</a></li>
+{{--                            <li class="dropdown"><a href="gallery.html">Gallery</a>--}}
+{{--                                <ul>--}}
+{{--                                    <li><a href="{{route('gallery')}}">Fullwidth Gallery</a></li>--}}
+{{--                                    <li><a href="gallery-single.html">Gallery Single</a></li>--}}
+{{--                                </ul>--}}
+{{--                            </li>--}}
 {{--                            <li class="dropdown"><a href="blog-grid.html">Blog</a>--}}
 {{--                                <ul>--}}
 {{--                                    <li><a href="blog-grid.html">Blog Grid Layout</a></li>--}}

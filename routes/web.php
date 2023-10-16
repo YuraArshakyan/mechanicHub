@@ -9,6 +9,8 @@ use App\Models\reviews;
 use App\Models\faqs;
 use App\Models\services;
 use App\Http\Controllers\srsingle;
+use App\Models\galerys;
+use App\Models\configs;
 
 /*
 |--------------------------------------------------------------------------
@@ -84,10 +86,14 @@ Route::get('/services', function () {
     return view('services', compact('services', 'max_id'));
 })->name('services');
 
+Route::get('/gallery', function () {
+    $gallerys = galerys::all();
+    return view('gallery', compact('gallerys'));
+})->name('gallery');
+
 Route::get('/contact', function () {
-    $max_id = services::max('id');
-    $services = services::all();
-    return view('contact', compact('services', 'max_id'));
+    $configs = configs::all();
+    return view('contact', compact('configs'));
 })->name('contact');
 
 Route::controller(srsingle::class)->group(function (){
