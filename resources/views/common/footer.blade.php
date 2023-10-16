@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <!--Start single footer widget-->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <div class="single-footer-widget martop-minus pd-bottom50">
                     <div class="footer-logo">
                         <a href="index.html">
@@ -18,27 +18,27 @@
             </div>
             <!--End single footer widget-->
             <!--Start single footer widget-->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                <div class="single-footer-widget pd-bottom50">
-                    <div class="title">
-                        <h3>Latest Blog Post</h3>
-                    </div>
-                    <ul class="latest-blog">
-                        <li>
-                            <div class="text-holder">
-                                <a href="#">Find latest news about our new and used car for easy to choose best one.</a>
-                                <span><i class="fa fa-clock-o" aria-hidden="true"></i>Aug 21, 2015</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="text-holder">
-                                <a href="#">Car kids grill the car experts, Esspecially intoduced for childrens.</a>
-                                <span><i class="fa fa-clock-o" aria-hidden="true"></i>July 17, 2015</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+{{--            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">--}}
+{{--                <div class="single-footer-widget pd-bottom50">--}}
+{{--                    <div class="title">--}}
+{{--                        <h3>Latest Blog Post</h3>--}}
+{{--                    </div>--}}
+{{--                    <ul class="latest-blog">--}}
+{{--                        <li>--}}
+{{--                            <div class="text-holder">--}}
+{{--                                <a href="#">Find latest news about our new and used car for easy to choose best one.</a>--}}
+{{--                                <span><i class="fa fa-clock-o" aria-hidden="true"></i>Aug 21, 2015</span>--}}
+{{--                            </div>--}}
+{{--                        </li>--}}
+{{--                        <li>--}}
+{{--                            <div class="text-holder">--}}
+{{--                                <a href="#">Car kids grill the car experts, Esspecially intoduced for childrens.</a>--}}
+{{--                                <span><i class="fa fa-clock-o" aria-hidden="true"></i>July 17, 2015</span>--}}
+{{--                            </div>--}}
+{{--                        </li>--}}
+{{--                    </ul>--}}
+{{--                </div>--}}
+{{--            </div>--}}
             <!--End single footer widget-->
             <!--Start single footer widget-->
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
@@ -52,7 +52,7 @@
                                 <span class="flaticon-maps-and-flags"></span>
                             </div>
                             <div class="text-holder">
-                                <h5>Rock St 12, Newyork City, USA</h5>
+                                <h5>{{$configs[5]->value}}</h5>
                             </div>
                         </li>
                         <li>
@@ -60,7 +60,7 @@
                                 <span class="flaticon-phone-receiver"></span>
                             </div>
                             <div class="text-holder">
-                                <h5>Phone +44 567 890123</h5>
+                                <h5>{!!$configs[0]->value!!}</h5>
                             </div>
                         </li>
                         <li>
@@ -68,15 +68,7 @@
                                 <span class="flaticon-envelope"></span>
                             </div>
                             <div class="text-holder">
-                                <h5>Mail@MechanicHub.com</h5>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icon-holder">
-                                <span class="flaticon-fax"></span>
-                            </div>
-                            <div class="text-holder">
-                                <h5>(526) 326-985-7423</h5>
+                                <h5>{!! $configs[1]->value !!}</h5>
                             </div>
                         </li>
                     </ul>
@@ -93,13 +85,7 @@
                         <h3>Working Hours</h3>
                     </div>
                     <ul class="working-hours">
-                        <li>Monday: <span>9:30 am - 6.00 pm</span></li>
-                        <li>Tuesday: <span>9:30 am - 6.00 pm</span></li>
-                        <li>Wednesday: <span>9:30 am - 6.00 pm</span></li>
-                        <li>Thursday: <span>9:30 am - 6.00 pm</span></li>
-                        <li>Friday: <span>9:30 am - 6.00 pm</span></li>
-                        <li>Saturday: <span>9:30 am - 6.00 pm</span></li>
-                        <li>Sunday: <span class="closed">Closed</span></li>
+                        {!!$configs[6]->value!!}
                     </ul>
                 </div>
             </div>
@@ -115,7 +101,7 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="copyright-text">
-                    <p>Copyright @ 2017 <a href="#">Steelthemes</a>, All Right Reserved</p>
+                    <p>Copyright &copy; {{date('Y')}}, All Right Reserved</p>
                 </div>
             </div>
             <div class="col-md-4">

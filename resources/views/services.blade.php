@@ -13,7 +13,8 @@
 <!--End top bar area-->
 
 <!--Start mainmenu area-->
-    @include('common.1.mainmenue')
+@section('activePage3', 'current')
+@include('common.1.mainmenue')
 <!--End mainmenu area-->
 
 <!--Start breadcrumb area-->

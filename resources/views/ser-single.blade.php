@@ -86,7 +86,7 @@
                         </div>
                         <div class="navbar-collapse collapse clearfix">
                             <ul class="navigation clearfix">
-                                <li class="dropdown current"><a href="/">Home</a>
+                                <li class="dropdown"><a href="/">Home</a>
                                     <ul>
                                         <li><a href="{{route('home1')}}">Home One</a></li>
                                         <li><a href="{{route('home2')}}">Home Two</a></li>
@@ -103,7 +103,7 @@
                                         <li><a href="{{route('faqs')}}">FAQ’s</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropdown"><a href="{{route('services')}}">Services</a>
+                                <li class="dropdown current"><a href="{{route('services')}}">Services</a>
                                     <ul>
                                         <li><a href="{{route('services')}}">View All Services</a></li>
                                         <li><a href="{{route('ser-single', 1)}}">Wheel Works</a></li>
@@ -116,29 +116,30 @@
                                         <li><a href="{{route('ser-single', 8)}}">Belts & Hoses</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropdown"><a href="/">Gallery</a>
-                                    <ul>
-                                        <li><a href="gallery.html">Fullwidth Gallery</a></li>
-                                        <li><a href="gallery-single.html">Gallery Single</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown"><a href="blog-grid.html">Blog</a>
-                                    <ul>
-                                        <li><a href="blog-grid.html">Blog Grid Layout</a></li>
-                                        <li><a href="blog-with-sidebar.html">Blog With Sidebar</a></li>
-                                        <li><a href="blog-single.html">Blog Single Post</a></li>
-                                    </ul>
-                                </li>
-                                <li class="dropdown"><a href="shop.html">Shop</a>
-                                    <ul>
-                                        <li><a href="shop.html">Shop Products</a></li>
-                                        <li><a href="shop-single.html">Products Single</a></li>
-                                        <li><a href="shopping-cart.html">Shopping Cart</a></li>
-                                        <li><a href="checkout.html">Checkout</a></li>
-                                        <li><a href="account.html">My Account</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">Contact Us</a></li>
+                                <li class="@yield('activePage4')"><a href="{{route('gallery')}}">Gallery</a></li>
+                                {{--                            <li class="dropdown"><a href="/">Gallery</a>--}}
+                                {{--                                <ul>--}}
+                                {{--                                    <li><a href="{{route('gallery')}}">Fullwidth Gallery</a></li>--}}
+                                {{--                                    <li><a href="gallery-single.html">Gallery Single</a></li>--}}
+                                {{--                                </ul>--}}
+                                {{--                            </li>--}}
+                                {{--                            <li class="dropdown"><a href="blog-grid.html">Blog</a>--}}
+                                {{--                                <ul>--}}
+                                {{--                                    <li><a href="blog-grid.html">Blog Grid Layout</a></li>--}}
+                                {{--                                    <li><a href="blog-with-sidebar.html">Blog With Sidebar</a></li>--}}
+                                {{--                                    <li><a href="blog-single.html">Blog Single Post</a></li>--}}
+                                {{--                                </ul>--}}
+                                {{--                            </li>--}}
+                                {{--                            <li class="dropdown"><a href="shop.html">Shop</a>--}}
+                                {{--                                <ul>--}}
+                                {{--                                    <li><a href="shop.html">Shop Products</a></li>--}}
+                                {{--                                    <li><a href="shop-single.html">Products Single</a></li>--}}
+                                {{--                                    <li><a href="shopping-cart.html">Shopping Cart</a></li>--}}
+                                {{--                                    <li><a href="checkout.html">Checkout</a></li>--}}
+                                {{--                                    <li><a href="account.html">My Account</a></li>--}}
+                                {{--                                </ul>--}}
+                                {{--                            </li>--}}
+                                <li class="@yield('activePage5')"><a href="{{route('contact')}}">Contact Us</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -376,138 +377,123 @@
 <!--End service single area-->
 
 <!--Start footer area-->
-<footer class="footer-area">
-    <div class="container">
-        <div class="row">
-            <!--Start single footer widget-->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                <div class="single-footer-widget martop-minus pd-bottom50">
-                    <div class="footer-logo">
-                        <a href="index.html">
-                            <img src="/images/footer/footer-logo.png" alt="Awesome Footer Logo">
-                        </a>
-                    </div>
-                    <div class="our-info">
-                        <p>Mechanic HUB  was founded in 1998. Delivering the highest degree of customer satisfaction through superior workmanship and service. Car owners often lack visibility regarding the quality and price.</p>
-                        <a class="thm-btn" href="#">Get quote now</a>
-                    </div>
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <!--Start single footer widget-->
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="single-footer-widget martop-minus pd-bottom50">
+                        <div class="footer-logo">
+                            <a href="index.html">
+                                <img src="images/footer/footer-logo.png" alt="Awesome Footer Logo">
+                            </a>
+                        </div>
+                        <div class="our-info">
+                            <p>Mechanic HUB  was founded in 1998. Delivering the highest degree of customer satisfaction through superior workmanship and service. Car owners often lack visibility regarding the quality and price.</p>
+                            <a class="thm-btn" href="#">Get quote now</a>
+                        </div>
 
-                </div>
-            </div>
-            <!--End single footer widget-->
-            <!--Start single footer widget-->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                <div class="single-footer-widget pd-bottom50">
-                    <div class="title">
-                        <h3>Latest Blog Post</h3>
-                    </div>
-                    <ul class="latest-blog">
-                        <li>
-                            <div class="text-holder">
-                                <a href="#">Find latest news about our new and used car for easy to choose best one.</a>
-                                <span><i class="fa fa-clock-o" aria-hidden="true"></i>Aug 21, 2015</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="text-holder">
-                                <a href="#">Car kids grill the car experts, Esspecially intoduced for childrens.</a>
-                                <span><i class="fa fa-clock-o" aria-hidden="true"></i>July 17, 2015</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!--End single footer widget-->
-            <!--Start single footer widget-->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                <div class="single-footer-widget mar-bottom">
-                    <div class="title">
-                        <h3>Get In Contact</h3>
-                    </div>
-                    <ul class="footer-contact-info">
-                        <li>
-                            <div class="icon-holder">
-                                <span class="flaticon-maps-and-flags"></span>
-                            </div>
-                            <div class="text-holder">
-                                <h5>Rock St 12, Newyork City, USA</h5>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icon-holder">
-                                <span class="flaticon-phone-receiver"></span>
-                            </div>
-                            <div class="text-holder">
-                                <h5>Phone +44 567 890123</h5>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icon-holder">
-                                <span class="flaticon-envelope"></span>
-                            </div>
-                            <div class="text-holder">
-                                <h5>Mail@MechanicHub.com</h5>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="icon-holder">
-                                <span class="flaticon-fax"></span>
-                            </div>
-                            <div class="text-holder">
-                                <h5>(526) 326-985-7423</h5>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="map">
-                        <a href="#">Find Us On Map</a>
                     </div>
                 </div>
-            </div>
-            <!--Start single footer widget-->
-            <!--Start single footer widget-->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                <div class="single-footer-widget clearfix">
-                    <div class="title">
-                        <h3>Working Hours</h3>
+                <!--End single footer widget-->
+                <!--Start single footer widget-->
+                {{--            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">--}}
+                {{--                <div class="single-footer-widget pd-bottom50">--}}
+                {{--                    <div class="title">--}}
+                {{--                        <h3>Latest Blog Post</h3>--}}
+                {{--                    </div>--}}
+                {{--                    <ul class="latest-blog">--}}
+                {{--                        <li>--}}
+                {{--                            <div class="text-holder">--}}
+                {{--                                <a href="#">Find latest news about our new and used car for easy to choose best one.</a>--}}
+                {{--                                <span><i class="fa fa-clock-o" aria-hidden="true"></i>Aug 21, 2015</span>--}}
+                {{--                            </div>--}}
+                {{--                        </li>--}}
+                {{--                        <li>--}}
+                {{--                            <div class="text-holder">--}}
+                {{--                                <a href="#">Car kids grill the car experts, Esspecially intoduced for childrens.</a>--}}
+                {{--                                <span><i class="fa fa-clock-o" aria-hidden="true"></i>July 17, 2015</span>--}}
+                {{--                            </div>--}}
+                {{--                        </li>--}}
+                {{--                    </ul>--}}
+                {{--                </div>--}}
+                {{--            </div>--}}
+                <!--End single footer widget-->
+                <!--Start single footer widget-->
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <div class="single-footer-widget mar-bottom">
+                        <div class="title">
+                            <h3>Get In Contact</h3>
+                        </div>
+                        <ul class="footer-contact-info">
+                            <li>
+                                <div class="icon-holder">
+                                    <span class="flaticon-maps-and-flags"></span>
+                                </div>
+                                <div class="text-holder">
+                                    <h5>{{$configs[5]->value}}</h5>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-holder">
+                                    <span class="flaticon-phone-receiver"></span>
+                                </div>
+                                <div class="text-holder">
+                                    <h5>{!!$configs[0]->value!!}</h5>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-holder">
+                                    <span class="flaticon-envelope"></span>
+                                </div>
+                                <div class="text-holder">
+                                    <h5>{!! $configs[1]->value !!}</h5>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="map">
+                            <a href="#">Find Us On Map</a>
+                        </div>
                     </div>
-                    <ul class="working-hours">
-                        <li>Monday: <span>9:30 am - 6.00 pm</span></li>
-                        <li>Tuesday: <span>9:30 am - 6.00 pm</span></li>
-                        <li>Wednesday: <span>9:30 am - 6.00 pm</span></li>
-                        <li>Thursday: <span>9:30 am - 6.00 pm</span></li>
-                        <li>Friday: <span>9:30 am - 6.00 pm</span></li>
-                        <li>Saturday: <span>9:30 am - 6.00 pm</span></li>
-                        <li>Sunday: <span class="closed">Closed</span></li>
-                    </ul>
                 </div>
-            </div>
-            <!--End single footer widget-->
-        </div>
-    </div>
-</footer>
-<!--End footer area-->
-
-<!--Start footer bottom area-->
-<section class="footer-bottom-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="copyright-text">
-                    <p>Copyright @ 2017 <a href="#">Steelthemes</a>, All Right Reserved</p>
+                <!--Start single footer widget-->
+                <!--Start single footer widget-->
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <div class="single-footer-widget clearfix">
+                        <div class="title">
+                            <h3>Working Hours</h3>
+                        </div>
+                        <ul class="working-hours">
+                            {!!$configs[6]->value!!}
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <ul class="footer-social-links">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                </ul>
+                <!--End single footer widget-->
             </div>
         </div>
-    </div>
-</section>
-<!--End footer bottom area-->
+    </footer>
+    <!--End footer area-->
+
+    <!--Start footer bottom area-->
+    <section class="footer-bottom-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="copyright-text">
+                        <p>Copyright &copy; {{date('Y')}}, All Right Reserved</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <ul class="footer-social-links">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </div>
 

@@ -13,6 +13,7 @@
 <!--End top bar area-->
 
 <!--Start mainmenu area-->
+@section('activePage2', 'current')
 @include('common.1.mainmenue')
 <!--End mainmenu area-->
 

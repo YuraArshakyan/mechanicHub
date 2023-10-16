@@ -12,6 +12,7 @@
 
     <!--Start mainmenu area-->
     @include('common.2.mainmenue2')
+    @section('activePage1', 'current')
     <!--End mainmenu area-->
 
     <!--Start rev slider wrapper-->

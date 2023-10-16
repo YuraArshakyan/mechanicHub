@@ -20,7 +20,7 @@
                     </div>
                     <div class="navbar-collapse collapse clearfix">
                         <ul class="navigation clearfix">
-                            <li class="dropdown current"><a href="index.html">Home</a>
+                            <li class="dropdown @yield('activePage1')"><a href="index.html">Home</a>
                                 <ul>
                                     <li><a href="{{route('home1')}}">Home One</a></li>
                                     <li><a href="{{route('home2')}}">Home Two</a></li>
@@ -28,7 +28,7 @@
                                     <li><a href="/">Home Four</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a href="about.html">About us</a>
+                            <li class="dropdown @yield('activePage2')"><a href="about.html">About us</a>
                                 <ul>
                                     <li><a href="{{route('about')}}">About Mechanichub</a></li>
                                     <li><a href="{{route('team')}}">Meet Our Experts</a></li>
@@ -37,7 +37,7 @@
                                     <li><a href="{{route('faqs')}}">FAQ’s</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a href="{{route('services')}}">Services</a>
+                            <li class="dropdown @yield('activePage3')"><a href="{{route('services')}}">Services</a>
                                 <ul>
                                     <li><a href="{{route('services')}}">View All Services</a></li>
                                     <li><a href="{{route('ser-single', 1)}}">Wheel Works</a></li>
@@ -50,30 +50,30 @@
                                     <li><a href="{{route('ser-single', 8)}}">Belts & Hoses</a></li>
                                 </ul>
                             </li>
-                            <li><a href="{{route('gallery')}}">Gallery</a></li>
-{{--                            <li class="dropdown"><a href="/">Gallery</a>--}}
-{{--                                <ul>--}}
-{{--                                    <li><a href="{{route('gallery')}}">Fullwidth Gallery</a></li>--}}
-{{--                                    <li><a href="gallery-single.html">Gallery Single</a></li>--}}
-{{--                                </ul>--}}
-{{--                            </li>--}}
-{{--                            <li class="dropdown"><a href="blog-grid.html">Blog</a>--}}
-{{--                                <ul>--}}
-{{--                                    <li><a href="blog-grid.html">Blog Grid Layout</a></li>--}}
-{{--                                    <li><a href="blog-with-sidebar.html">Blog With Sidebar</a></li>--}}
-{{--                                    <li><a href="blog-single.html">Blog Single Post</a></li>--}}
-{{--                                </ul>--}}
-{{--                            </li>--}}
-{{--                            <li class="dropdown"><a href="shop.html">Shop</a>--}}
-{{--                                <ul>--}}
-{{--                                    <li><a href="shop.html">Shop Products</a></li>--}}
-{{--                                    <li><a href="shop-single.html">Products Single</a></li>--}}
-{{--                                    <li><a href="shopping-cart.html">Shopping Cart</a></li>--}}
-{{--                                    <li><a href="checkout.html">Checkout</a></li>--}}
-{{--                                    <li><a href="account.html">My Account</a></li>--}}
-{{--                                </ul>--}}
-{{--                            </li>--}}
-                            <li><a href="{{route('contact')}}">Contact Us</a></li>
+                            <li class="@yield('activePage4')"><a href="{{route('gallery')}}">Gallery</a></li>
+                            {{--                            <li class="dropdown"><a href="/">Gallery</a>--}}
+                            {{--                                <ul>--}}
+                            {{--                                    <li><a href="{{route('gallery')}}">Fullwidth Gallery</a></li>--}}
+                            {{--                                    <li><a href="gallery-single.html">Gallery Single</a></li>--}}
+                            {{--                                </ul>--}}
+                            {{--                            </li>--}}
+                            {{--                            <li class="dropdown"><a href="blog-grid.html">Blog</a>--}}
+                            {{--                                <ul>--}}
+                            {{--                                    <li><a href="blog-grid.html">Blog Grid Layout</a></li>--}}
+                            {{--                                    <li><a href="blog-with-sidebar.html">Blog With Sidebar</a></li>--}}
+                            {{--                                    <li><a href="blog-single.html">Blog Single Post</a></li>--}}
+                            {{--                                </ul>--}}
+                            {{--                            </li>--}}
+                            {{--                            <li class="dropdown"><a href="shop.html">Shop</a>--}}
+                            {{--                                <ul>--}}
+                            {{--                                    <li><a href="shop.html">Shop Products</a></li>--}}
+                            {{--                                    <li><a href="shop-single.html">Products Single</a></li>--}}
+                            {{--                                    <li><a href="shopping-cart.html">Shopping Cart</a></li>--}}
+                            {{--                                    <li><a href="checkout.html">Checkout</a></li>--}}
+                            {{--                                    <li><a href="account.html">My Account</a></li>--}}
+                            {{--                                </ul>--}}
+                            {{--                            </li>--}}
+                            <li class="@yield('activePage5')"><a href="{{route('contact')}}">Contact Us</a></li>
                         </ul>
                     </div>
                 </nav>
