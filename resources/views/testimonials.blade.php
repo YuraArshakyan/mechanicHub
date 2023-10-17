@@ -87,7 +87,7 @@
                                 <a class="thm-btn" href="#">Delete</a>
                             </div>
                             <div class="button pull-right_edit pull-left col-xs-5">
-                                <a class="thm-btn" href="{{url('edit'. '/' . 'reviews' . '/' . $review->id . '/' . 4)}}">Edit</a>
+                                <a class="thm-btn" href="{{url('edit'. '/' . 'reviews' . '/' . $review->id . '/' . 10)}}">Edit</a>
                             </div>
                         </div>
                     </div>

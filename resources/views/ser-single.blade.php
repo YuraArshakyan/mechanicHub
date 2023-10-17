@@ -85,12 +85,12 @@
                             </div>
                             <div class="col-md-5">
                                 <div class="video-holder">
-                                    <img src="/images/services/single-service/video-gallery.jpg" alt="Awesome Video Gallery">
+                                    <img src="/images/services/single-service/{{$choose[0]->photo}}" alt="Awesome Video Gallery">
                                     <div class="overlay-gallery">
                                         <div class="icon-holder">
                                             <div class="icon">
                                                 <a class="html5lightbox" title="MechanicHub Video Gallery" href="https://www.youtube.com/watch?v=i3F91KKbGd0">
-                                                    <img src="/images/icon/{{$choose[0]->photo}}" alt="Play Button">
+                                                    <img src="/images/icon/play-btn-1.png" alt="Play Button">
                                                 </a>
                                             </div>
                                         </div>

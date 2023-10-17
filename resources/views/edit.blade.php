@@ -108,7 +108,12 @@
                                 <div class="row">
                                     <form action="#">
                                         <div class="col-md-12" style="margin-top: 10px">
-                                            <div class="input-field">
+                                            <img src="/images/team/{{$photos[$id-1]->photo}}" alt="Awesome Image">
+                                            <label class="file_upload" style="width: 100%; margin-top: 15px;">
+                                                <input type="file" name="slide" style="display: none"/>
+                                                <a type="file" class="btn btn-primary">Change</a>
+                                            </label>
+                                            <div class="input-field" style="margin-top: 15px;">
                                                 <textarea name="text1" class="col-md-12">{{$photos[$id-1]->text}}</textarea>
                                                 <div class="icon-holder">
                                                     <i class="fa fa-file-text-o" aria-hidden="true"></i>
@@ -264,6 +269,15 @@
                                 </div>
                                 <div class="row">
                                     <form action="#">
+                                        <div class="col-md-12" style="margin-top: 10px">
+                                            <div class="input-field">
+                                                <img src="/images/services/{{$services[$id-1]->photo}}" alt="Awesome Image">
+                                                <label class="file_upload" style="width: 100%; margin-top: 15px;">
+                                                    <input type="file" name="slide" style="display: none"/>
+                                                    <a type="file" class="btn btn-primary">Change</a>
+                                                </label>
+                                            </div>
+                                        </div>
                                         <div class="col-md-12" style="z-index: 100;">
                                             <div class="input-field">
                                                 <textarea name="text" class="col-md-12">{{$services[$id-1]->title}}</textarea>
@@ -283,6 +297,15 @@
                                         <div class="sec-title" style="margin-top: 10px;">
                                             <h1>why choose us</h1>
                                             <span class="border"></span>
+                                        </div>
+                                        <div class="col-md-12" style="margin-top: 10px">
+                                            <div class="input-field">
+                                                <img src="/images/services/single-service/{{$choose[0]->photo}}" alt="Awesome Video Gallery">
+                                                <label class="file_upload" style="width: 100%; margin-top: 15px;">
+                                                    <input type="file" name="slide" style="display: none"/>
+                                                    <a type="file" class="btn btn-primary">Change</a>
+                                                </label>
+                                            </div>
                                         </div>
                                         <div class="col-md-12">
                                             <div class="input-field">
@@ -334,6 +357,13 @@
                         <div class="row">
                             <form action="#">
                                 <div class="col-md-12" style="z-index: 100;">
+                                    <div class="input-field">
+                                        <img src="/images/projects/{{$gallery[$id-1]->photo}}" alt="Awesome Video Gallery">
+                                        <label class="file_upload" style="width: 100%; margin-top: 15px;">
+                                            <input type="file" name="slide" style="display: none"/>
+                                            <a type="file" class="btn btn-primary">Change</a>
+                                        </label>
+                                    </div>
                                     <div class="input-field">
                                         <textarea name="text" class="col-md-12">{{$gallery[$id-1]->text1}}</textarea>
                                         <div class="icon-holder">
@@ -566,6 +596,77 @@
                     </div>
                 </div>
             </section>
+    <!--End login register area-->
+    @break;
+    @case(10)
+    <!--Start login register area-->
+    <section class="login-register-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="form">
+                        <div class="sec-title">
+                            <h1>Edit {{$table}}</h1>
+                            <span class="border"></span>
+                        </div>
+                        <div class="row">
+                            <form action="#">
+                                <div class="col-md-12">
+                                    <img src="/images/testimonial/{{$reviews[$id-1]->photo}}" alt="Awesome Image">
+                                    <label class="file_upload" style="width: 100%; margin-top: 15px;">
+                                        <input type="file" name="slide" style="display: none"/>
+                                        <a type="file" class="btn btn-primary">Change</a>
+                                    </label>
+                                    <div class="input-field">
+                                        <textarea name="text" class="col-md-12">{{$reviews[$id-1]->name}}</textarea>
+                                        <div class="icon-holder">
+                                            <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12" style="margin-top: 10px">
+                                    <div class="input-field">
+                                        <textarea name="text" class="col-md-12">{{$reviews[$id-1]->comment}}</textarea>
+                                        <div class="icon-holder">
+                                            <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12" style="margin-top: 10px">
+                                    <div class="input-field">
+                                        <textarea name="text" class="col-md-12">{{$reviews[$id-1]->service}}</textarea>
+                                        <div class="icon-holder">
+                                            <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12" style="margin-top: 10px">
+                                    <div class="input-field">
+                                        <img src="/images/testimonial/{{$reviews[$id-1]->car}}" alt="Awesome Image">
+                                        <label class="file_upload" style="width: 100%; margin-top: 15px;">
+                                            <input type="file" name="slide" style="display: none"/>
+                                            <a type="file" class="btn btn-primary">Change</a>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <button class="thm-btn" type="submit">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="form register">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!--End login register area-->
     @break;
 @endswitch

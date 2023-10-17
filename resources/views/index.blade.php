@@ -102,7 +102,7 @@
             </div>
             <div class="row">
                 <!--Start single service item-->
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="single-service-item text-center">
                         <div class="icon-holder">
                             <span class="flaticon-car-wheel"></span>
@@ -116,21 +116,9 @@
                 </div>
                 <!--End single service item-->
                 <!--Start single service item-->
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="single-service-item text-center">
-                        <div class="icon-holder">
-                            <span class="flaticon-painter-roller"></span>
-                        </div>
-                        <div class="text-holder">
-                            <a href="ser-single2-painting-works.html"><h3>Painting Works</h3></a>
-                            <p>Auto body painting means you can pursue entry level positions with of potential
-                                employers.</p>
-                        </div>
-                    </div>
-                </div>
                 <!--End single service item-->
                 <!--Start single service item-->
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="single-service-item text-center">
                         <div class="icon-holder">
                             <span class="flaticon-air-conditioner"></span>
@@ -139,20 +127,6 @@
                             <a href="ser-single3-air-conditioner.html"><h3>Air Conditioner</h3></a>
                             <p>A car cooler is an auto mobile window evaporative cooler, sometimes as a swamp
                                 cooler.</p>
-                        </div>
-                    </div>
-                </div>
-                <!--End single service item-->
-                <!--Start single service item-->
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="single-service-item text-center">
-                        <div class="icon-holder">
-                            <span class="flaticon-water"></span>
-                        </div>
-                        <div class="text-holder">
-                            <a href="ser-single4-water-service.html"><h3>Water Service</h3></a>
-                            <p>Providing best range of car washer, vehicle washer, garage pumps, auto garage
-                                equipment</p>
                         </div>
                     </div>
                 </div>
@@ -532,9 +506,7 @@
                                         <select class="selectmenu">
                                             <option selected="selected">Select services</option>
                                             <option>Wheel Works</option>
-                                            <option>Painting Works</option>
                                             <option>Air Conditioner</option>
-                                            <option>Water Service</option>
                                             <option>Engine Works</option>
                                             <option>lube Oil & Filters</option>
                                             <option>Brake Repairs</option>
@@ -590,9 +562,9 @@
     </section>
     <!--End appoinment area-->
 
-    <!--Start latest blog area-->
-    @include('common.lastNews')
-    <!--End latest blog area-->
+{{--    <!--Start latest blog area-->--}}
+{{--    @include('common.lastNews')--}}
+{{--    <!--End latest blog area-->--}}
 
     <!--Start model area-->
     @include('common.models')
