@@ -58,7 +58,7 @@
                             <form action="#">
                                 <div class="col-md-12">
                                     <div class="input-field">
-                                        <textarea name="text" class="col-md-12">{{$texts[0]->text}}</textarea>
+                                        <textarea name="text1" class="col-md-12">{{$texts[0]->text}}</textarea>
                                         <div class="icon-holder">
                                             <i class="fa fa-file-text-o" aria-hidden="true"></i>
                                         </div>
@@ -66,7 +66,7 @@
                                 </div>
                                 <div class="col-md-12" style="margin-top: 10px">
                                     <div class="input-field">
-                                        <textarea name="text1" class="col-md-12">{{$texts[1]->text}}</textarea>
+                                        <textarea name="text2" class="col-md-12">{{$texts[1]->text}}</textarea>
                                         <div class="icon-holder">
                                             <i class="fa fa-file-text-o" aria-hidden="true"></i>
                                         </div>
@@ -110,7 +110,7 @@
                                         <div class="col-md-12" style="margin-top: 10px">
                                             <img src="/images/team/{{$photos[$id-1]->photo}}" alt="Awesome Image">
                                             <label class="file_upload" style="width: 100%; margin-top: 15px;">
-                                                <input type="file" name="slide" style="display: none"/>
+                                                <input type="file" name="photo1" style="display: none"/>
                                                 <a type="file" class="btn btn-primary">Change</a>
                                             </label>
                                             <div class="input-field" style="margin-top: 15px;">
@@ -173,7 +173,7 @@
                                 </div>
                                 <div class="col-md-12" style="margin-top: 10px">
                                     <div class="input-field">
-                                        <input name="text1" class="col-md-12" style="height: 40px" value="{{$prices[$id-1]->price}}">
+                                        <input name="text2" class="col-md-12" style="height: 40px" value="{{$prices[$id-1]->price}}">
                                         <div class="icon-holder">
                                             <i class="fa fa-file-text-o" aria-hidden="true"></i>
                                         </div>
@@ -181,7 +181,7 @@
                                 </div>
                                 <div class="col-md-12" style="margin-top: 10px">
                                     <div class="input-field">
-                                        <textarea name="text2" class="col-md-12">{{$prices[$id-1]->services}}</textarea>
+                                        <textarea name="text3" class="col-md-12">{{$prices[$id-1]->services}}</textarea>
                                         <div class="icon-holder">
                                             <i class="fa fa-file-text-o" aria-hidden="true"></i>
                                         </div>
@@ -222,7 +222,7 @@
                             <form action="#">
                                 <div class="col-md-12">
                                     <div class="input-field">
-                                        <textarea name="text" class="col-md-12">{{$qa[$id-1]->question}}</textarea>
+                                        <textarea name="text1" class="col-md-12">{{$qa[$id-1]->question}}</textarea>
                                         <div class="icon-holder">
                                             <i class="fa fa-file-text-o" aria-hidden="true"></i>
                                         </div>
@@ -230,7 +230,7 @@
                                 </div>
                                 <div class="col-md-12" style="margin-top: 10px">
                                     <div class="input-field">
-                                        <textarea name="text1" class="col-md-12">{{$qa[$id-1]->answer}}</textarea>
+                                        <textarea name="text2" class="col-md-12">{{$qa[$id-1]->answer}}</textarea>
                                         <div class="icon-holder">
                                             <i class="fa fa-file-text-o" aria-hidden="true"></i>
                                         </div>
@@ -259,88 +259,88 @@
     @case(5)
     <!--Start login register area-->
     <section class="login-register-area">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="form">
-                                <div class="sec-title">
-                                    <h1>Edit {{$table}}</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="form">
+                        <div class="sec-title">
+                            <h1>Edit {{$table}}</h1>
+                            <span class="border"></span>
+                        </div>
+                        <div class="row">
+                            <form action="#">
+                                <div class="col-md-12" style="margin-top: 10px">
+                                    <div class="input-field">
+                                        <img src="/images/services/{{$services[$id-1]->photo}}" alt="Awesome Image">
+                                        <label class="file_upload" style="width: 100%; margin-top: 15px;">
+                                            <input type="file" name="photo1" style="display: none"/>
+                                            <a type="file" class="btn btn-primary">Change</a>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12" style="z-index: 100;">
+                                    <div class="input-field">
+                                        <textarea name="text1" class="col-md-12">{{$services[$id-1]->title}}</textarea>
+                                        <div class="icon-holder">
+                                            <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12" style="margin-top: 15px;z-index: 100;">
+                                    <div class="input-field">
+                                        <textarea name="text2" class="col-md-12">{{$services[$id-1]->text}}</textarea>
+                                        <div class="icon-holder">
+                                            <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sec-title" style="margin-top: 10px;">
+                                    <h1>why choose us</h1>
                                     <span class="border"></span>
                                 </div>
-                                <div class="row">
-                                    <form action="#">
-                                        <div class="col-md-12" style="margin-top: 10px">
-                                            <div class="input-field">
-                                                <img src="/images/services/{{$services[$id-1]->photo}}" alt="Awesome Image">
-                                                <label class="file_upload" style="width: 100%; margin-top: 15px;">
-                                                    <input type="file" name="slide" style="display: none"/>
-                                                    <a type="file" class="btn btn-primary">Change</a>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12" style="z-index: 100;">
-                                            <div class="input-field">
-                                                <textarea name="text" class="col-md-12">{{$services[$id-1]->title}}</textarea>
-                                                <div class="icon-holder">
-                                                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12" style="margin-top: 15px;z-index: 100;">
-                                            <div class="input-field">
-                                                <textarea name="text1" class="col-md-12">{{$services[$id-1]->text}}</textarea>
-                                                <div class="icon-holder">
-                                                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="sec-title" style="margin-top: 10px;">
-                                            <h1>why choose us</h1>
-                                            <span class="border"></span>
-                                        </div>
-                                        <div class="col-md-12" style="margin-top: 10px">
-                                            <div class="input-field">
-                                                <img src="/images/services/single-service/{{$choose[0]->photo}}" alt="Awesome Video Gallery">
-                                                <label class="file_upload" style="width: 100%; margin-top: 15px;">
-                                                    <input type="file" name="slide" style="display: none"/>
-                                                    <a type="file" class="btn btn-primary">Change</a>
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="input-field">
-                                                <textarea name="text1" class="col-md-12">{{$choose[0]->title}}</textarea>
-                                                <div class="icon-holder">
-                                                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12" style="margin-top: 10px">
-                                            <div class="input-field">
-                                                <textarea name="text1" class="col-md-12">{{$choose[0]->text}}</textarea>
-                                                <div class="icon-holder">
-                                                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="row">
-                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                    <button class="thm-btn" type="submit">Submit</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
+                                <div class="col-md-12" style="margin-top: 10px">
+                                    <div class="input-field">
+                                        <img src="/images/services/single-service/{{$choose[0]->photo}}" alt="Awesome Video Gallery">
+                                        <label class="file_upload" style="width: 100%; margin-top: 15px;">
+                                            <input type="file" name="photo2" style="display: none"/>
+                                            <a type="file" class="btn btn-primary">Change</a>
+                                        </label>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                            <div class="form register">
-                            </div>
+                                <div class="col-md-12">
+                                    <div class="input-field">
+                                        <textarea name="text3" class="col-md-12">{{$choose[0]->title}}</textarea>
+                                        <div class="icon-holder">
+                                            <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12" style="margin-top: 10px">
+                                    <div class="input-field">
+                                        <textarea name="text4" class="col-md-12">{{$choose[0]->text}}</textarea>
+                                        <div class="icon-holder">
+                                            <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <button class="thm-btn" type="submit">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
-            </section>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="form register">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!--End login register area-->
     @break;
     @case(6)
@@ -360,12 +360,12 @@
                                     <div class="input-field">
                                         <img src="/images/projects/{{$gallery[$id-1]->photo}}" alt="Awesome Video Gallery">
                                         <label class="file_upload" style="width: 100%; margin-top: 15px;">
-                                            <input type="file" name="slide" style="display: none"/>
+                                            <input type="file" name="photo1" style="display: none"/>
                                             <a type="file" class="btn btn-primary">Change</a>
                                         </label>
                                     </div>
                                     <div class="input-field">
-                                        <textarea name="text" class="col-md-12">{{$gallery[$id-1]->text1}}</textarea>
+                                        <textarea name="text1" class="col-md-12">{{$gallery[$id-1]->text1}}</textarea>
                                         <div class="icon-holder">
                                             <i class="fa fa-file-text-o" aria-hidden="true"></i>
                                         </div>
@@ -373,7 +373,7 @@
                                 </div>
                                 <div class="col-md-12" style="margin-top: 15px;z-index: 100;">
                                     <div class="input-field">
-                                        <input name="text1" class="col-md-12" style="height: 40px" value="{{$gallery[$id-1]->client}}">
+                                        <input name="text2" class="col-md-12" style="height: 40px" value="{{$gallery[$id-1]->client}}">
                                         <div class="icon-holder">
                                             <i class="fa fa-file-text-o" aria-hidden="true"></i>
                                         </div>
@@ -381,7 +381,7 @@
                                 </div>
                                 <div class="col-md-12" style="margin-top: 15px;z-index: 100;">
                                     <div class="input-field">
-                                        <input name="text1" class="col-md-12" style="height: 40px" value="{{$gallery[$id-1]->category}}">
+                                        <input name="text3" class="col-md-12" style="height: 40px" value="{{$gallery[$id-1]->category}}">
                                         <div class="icon-holder">
                                             <i class="fa fa-file-text-o" aria-hidden="true"></i>
                                         </div>
@@ -389,7 +389,7 @@
                                 </div>
                                 <div class="col-md-12" style="margin-top: 15px;z-index: 100;">
                                     <div class="input-field">
-                                        <input name="text1" class="col-md-12" style="height: 40px" value="{{$gallery[$id-1]->date}}">
+                                        <input name="text4" class="col-md-12" style="height: 40px" value="{{$gallery[$id-1]->date}}">
                                         <div class="icon-holder">
                                             <i class="fa fa-file-text-o" aria-hidden="true"></i>
                                         </div>
@@ -397,7 +397,7 @@
                                 </div>
                                 <div class="col-md-12" style="margin-top: 15px;z-index: 100;">
                                     <div class="input-field">
-                                        <input name="text1" class="col-md-12" style="height: 40px" value="{{$gallery[$id-1]->mechanic}}">
+                                        <input name="text5" class="col-md-12" style="height: 40px" value="{{$gallery[$id-1]->mechanic}}">
                                         <div class="icon-holder">
                                             <i class="fa fa-file-text-o" aria-hidden="true"></i>
                                         </div>
@@ -405,7 +405,7 @@
                                 </div>
                                 <div class="col-md-12">
                                     <div class="input-field" style="margin-top: 10px">
-                                        <textarea name="text1" class="col-md-12">{{$gallery[0]->text2}}</textarea>
+                                        <textarea name="text6" class="col-md-12">{{$gallery[0]->text2}}</textarea>
                                         <div class="icon-holder">
                                             <i class="fa fa-file-text-o" aria-hidden="true"></i>
                                         </div>
@@ -413,7 +413,7 @@
                                 </div>
                                 <div class="col-md-12" style="margin-top: 10px">
                                     <div class="input-field">
-                                        <textarea name="text1" class="col-md-12">{{$gallery[0]->short_text}}</textarea>
+                                        <textarea name="text7" class="col-md-12">{{$gallery[0]->short_text}}</textarea>
                                         <div class="icon-holder">
                                             <i class="fa fa-file-text-o" aria-hidden="true"></i>
                                         </div>
@@ -421,7 +421,7 @@
                                 </div>
                                 <div class="col-md-12" style="margin-top: 15px;z-index: 100;">
                                     <div class="input-field">
-                                        <input name="text1" class="col-md-12" style="height: 40px" value="{{$gallery[$id-1]->filter}}">
+                                        <input name="text8" class="col-md-12" style="height: 40px" value="{{$gallery[$id-1]->filter}}">
                                         <div class="icon-holder">
                                             <i class="fa fa-file-text-o" aria-hidden="true"></i>
                                         </div>
@@ -450,25 +450,25 @@
     @case(7)
     <!--Start login register area-->
     <section class="login-register-area">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="form">
-                                <div class="sec-title">
-                                    <h1>Edit {{$table}}</h1>
-                                    <span class="border"></span>
-                                </div>
-                                <div class="row">
-                                    <form action="#">
-                                        <div class="col-md-12" style="z-index: 100;">
-                                            <div class="input-field">
-                                                <textarea name="text" class="col-md-12">{{$configs[$id-1]->value}}</textarea>
-                                                <div class="icon-holder">
-                                                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                                                </div>
-                                            </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="form">
+                        <div class="sec-title">
+                            <h1>Edit {{$table}}</h1>
+                            <span class="border"></span>
+                        </div>
+                        <div class="row">
+                            <form action="#">
+                                <div class="col-md-12" style="z-index: 100;">
+                                    <div class="input-field">
+                                        <textarea name="text1" class="col-md-12">{{$configs[$id-1]->value}}</textarea>
+                                        <div class="icon-holder">
+                                            <i class="fa fa-file-text-o" aria-hidden="true"></i>
                                         </div>
-                                        @if($id == 1)
+                                    </div>
+                                </div>
+                                @if($id == 1)
                                             <div class="col-md-12" style="margin-top: 15px;z-index: 100;">
                                                 <div class="input-field">
                                                     <input name="text1" class="col-md-12" style="height: 40px" value="{{$configs[$id]->value}}">
@@ -478,24 +478,24 @@
                                                 </div>
                                             </div>
                                         @endif
-                                        <div class="col-md-12">
-                                            <div class="row">
-                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                    <button class="thm-btn" type="submit">Submit</button>
-                                                </div>
-                                            </div>
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <button class="thm-btn" type="submit">Submit</button>
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                            <div class="form register">
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
-            </section>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="form register">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!--End login register area-->
     @break;
     @case(8)
@@ -544,58 +544,58 @@
     @case(9)
     <!--Start login register area-->
     <section class="login-register-area">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="form">
-                                <div class="sec-title">
-                                    <h1>Edit {{$table}}</h1>
-                                    <span class="border"></span>
-                                </div>
-                                <div class="row">
-                                    <form action="#">
-                                        <div class="col-md-12">
-                                            <div class="input-field">
-                                                <input name="text1" class="col-md-12" style="height: 40px" placeholder="Old password">
-                                                <div class="icon-holder">
-                                                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12" style="margin-top: 10px">
-                                            <div class="input-field">
-                                                <input name="text1" class="col-md-12" style="height: 40px" placeholder="New password">
-                                                <div class="icon-holder">
-                                                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12" style="margin-top: 10px">
-                                            <div class="input-field">
-                                                <input name="text1" class="col-md-12" style="height: 40px" placeholder="Re-enter new password">
-                                                <div class="icon-holder">
-                                                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="row">
-                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                    <button class="thm-btn" type="submit">Submit</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="form">
+                        <div class="sec-title">
+                            <h1>Edit {{$table}}</h1>
+                            <span class="border"></span>
                         </div>
-                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                            <div class="form register">
-                            </div>
+                        <div class="row">
+                            <form action="#">
+                                <div class="col-md-12">
+                                    <div class="input-field">
+                                        <input name="text1" class="col-md-12" style="height: 40px" placeholder="Old password">
+                                        <div class="icon-holder">
+                                            <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12" style="margin-top: 10px">
+                                    <div class="input-field">
+                                        <input name="text2" class="col-md-12" style="height: 40px" placeholder="New password">
+                                        <div class="icon-holder">
+                                            <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12" style="margin-top: 10px">
+                                    <div class="input-field">
+                                        <input name="text3" class="col-md-12" style="height: 40px" placeholder="Re-enter new password">
+                                        <div class="icon-holder">
+                                            <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                            <button class="thm-btn" type="submit">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
-            </section>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="form register">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!--End login register area-->
     @break;
     @case(10)
@@ -614,11 +614,11 @@
                                 <div class="col-md-12">
                                     <img src="/images/testimonial/{{$reviews[$id-1]->photo}}" alt="Awesome Image">
                                     <label class="file_upload" style="width: 100%; margin-top: 15px;">
-                                        <input type="file" name="slide" style="display: none"/>
+                                        <input type="file" name="photo1" style="display: none"/>
                                         <a type="file" class="btn btn-primary">Change</a>
                                     </label>
                                     <div class="input-field">
-                                        <textarea name="text" class="col-md-12">{{$reviews[$id-1]->name}}</textarea>
+                                        <textarea name="text1" class="col-md-12">{{$reviews[$id-1]->name}}</textarea>
                                         <div class="icon-holder">
                                             <i class="fa fa-file-text-o" aria-hidden="true"></i>
                                         </div>
@@ -626,7 +626,7 @@
                                 </div>
                                 <div class="col-md-12" style="margin-top: 10px">
                                     <div class="input-field">
-                                        <textarea name="text" class="col-md-12">{{$reviews[$id-1]->comment}}</textarea>
+                                        <textarea name="text2" class="col-md-12">{{$reviews[$id-1]->comment}}</textarea>
                                         <div class="icon-holder">
                                             <i class="fa fa-file-text-o" aria-hidden="true"></i>
                                         </div>
@@ -634,7 +634,7 @@
                                 </div>
                                 <div class="col-md-12" style="margin-top: 10px">
                                     <div class="input-field">
-                                        <textarea name="text" class="col-md-12">{{$reviews[$id-1]->service}}</textarea>
+                                        <textarea name="text3" class="col-md-12">{{$reviews[$id-1]->service}}</textarea>
                                         <div class="icon-holder">
                                             <i class="fa fa-file-text-o" aria-hidden="true"></i>
                                         </div>
@@ -644,7 +644,7 @@
                                     <div class="input-field">
                                         <img src="/images/testimonial/{{$reviews[$id-1]->car}}" alt="Awesome Image">
                                         <label class="file_upload" style="width: 100%; margin-top: 15px;">
-                                            <input type="file" name="slide" style="display: none"/>
+                                            <input type="file" name="photo2" style="display: none"/>
                                             <a type="file" class="btn btn-primary">Change</a>
                                         </label>
                                     </div>
