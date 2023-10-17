@@ -4,9 +4,8 @@
             <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                 <div class="top-left">
                     <ul class="top-contact-info">
-                        <li>Got any Problems?</li>
-                        <li><span class="flaticon-phone-receiver"></span>Phone +44 567 890123</li>
-                        <li><span class="flaticon-envelope"></span>Mail@MechanicHub.com</li>
+                        <li><span class="flaticon-phone-receiver"></span>{{$configs[0]->value}}</li>
+                        <li><span class="flaticon-tool"></span>{{$configs[5]->value}}</li>
                     </ul>
                 </div>
             </div>

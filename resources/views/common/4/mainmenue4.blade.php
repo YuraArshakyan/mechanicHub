@@ -74,6 +74,19 @@
 {{--                                </ul>--}}
 {{--                            </li>--}}
                             <li><a href="{{route('contact')}}">Contact Us</a></li>
+
+
+                            <li class="dropdown @yield('activePage3')"><a href="{{route('services')}}">Admin</a>
+                                <ul>
+                                    <li><a href="{{route('services')}}">Change carousel images</a></li>
+                                    <li><a href="{{url('edit'. '/' . 'password' . '/' . 100 . '/' . 9)}}">Change password</a></li>
+                                    {{--<li><a href="ser-single2-painting-works.html">Painting Works</a></li>--}}
+                                    <li><a href="{{url('edit'. '/' . 'configs' . '/' . 100 . '/' . 8)}}">Chang configs</a></li>
+                                    {{--<li><a href="ser-single4-water-service.html">Water Service</a></li>--}}
+                                </ul>
+                            </li>
+
+
                         </ul>
                     </div>
                 </nav>

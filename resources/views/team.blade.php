@@ -47,6 +47,10 @@
 <!--Start team page area-->
 <section class="team-page-area">
     <div class="container">
+        <div class="button pull-right_edit">
+            <a class="thm-btn" href="#">add</a>
+        </div>
+        <br>
         <div class="row masonary-layout">
             <!--Start single team member-->
             @foreach($photos as $photo)
@@ -71,6 +75,13 @@
                             <div class="bottom">
                                 {!!@$photo->text2!!}
                             </div>
+                        </div>
+                        <div class="button pull-right_edit">
+                            <a class="thm-btn" href="{{url('edit'. '/' . 'photos' . '/' . $photo->id . '/' . 2)}}">Edit</a>
+                        </div>
+                        <br>
+                        <div class="button pull-right_edit">
+                            <a class="thm-btn" href="#">delete</a>
                         </div>
                     </div>
                 </div>

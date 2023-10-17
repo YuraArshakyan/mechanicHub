@@ -348,9 +348,6 @@
                         <div class="title pull-left">
                             <h1>We provide them access to customers, schedule flexibility, and high-quality parts.</h1>
                         </div>
-                        <div class="button pull-right">
-                            <a class="thm-btn" href="#">Get a quote</a>
-                        </div>
                     </div>
                 </div>
             </div>

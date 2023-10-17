@@ -58,12 +58,13 @@
                                 <div class="box">
                                     <div class="content">
                                         <a href="{{route('ser-single', $service->id)}}"><i class="fa fa-link" aria-hidden="true"></i></a>
+                                        <a href="{{url('edit'. '/' . $service->title  . '/' . $service->id . '/' . 5)}}"><i class="fa fa-edit" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="text-holder">
-                            <a href="ser-single1-wheel-works.html"><h3>{!!$service->title!!}</h3></a>
+                            <a href="{{route('ser-single', $service->id)}}"><h3>{!!$service->title!!}</h3></a>
                             <p style="max-height: 200px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis">{{$service->text}}</p>
                         </div>
                     </div>

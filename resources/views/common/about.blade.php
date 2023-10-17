@@ -19,6 +19,9 @@
                                 <img src="images/icon/signature.png" alt="Signature">
                             </div>
                         </div>
+                            <div class="button pull-right_edit">
+                                <a class="thm-btn" href="{{url('edit'. '/' . 'texts' . '/' . 1 . '/' . 1)}}">Edit</a>
+                            </div>
                     </div>
                 </div>
             </div>

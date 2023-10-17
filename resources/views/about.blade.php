@@ -63,7 +63,7 @@
                         <h3><span class="flaticon-telephone"></span> 24/7 Customer Support</h3>
                     </div>
                     <div class="text">
-                        <h1>1800-456-789</h1>
+                        <h1>{{$configs[0]->value}}</h1>
                         <p>MechanicHub is your ONE STOP solution bringing best car services.</p>
                     </div>
                 </div>
@@ -87,14 +87,12 @@
             <div class="col-md-4">
                 <div class="single-box">
                     <div class="top">
-                        <h3><span class="flaticon-telephone"></span> 24/7 Customer Support</h3>
+                        <h3><span class="flaticon-location-pin"></span>24/7 Customer Support</h3>
+                    </div>
+                    <div class="text">
+                        <h1>{{$configs[5]->value}}</h1>
                     </div>
                     <div class="newsletter-form">
-                        <form action="#">
-                            <input type="email" name="email" placeholder="Email address">
-                            <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
-                        </form>
-                        <p>* Your Mail id is Fully Protected.</p>
                     </div>
                 </div>
             </div>

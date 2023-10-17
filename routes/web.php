@@ -11,6 +11,7 @@ use App\Models\services;
 use App\Http\Controllers\srsingle;
 use App\Models\galerys;
 use App\Models\configs;
+use App\Http\Controllers\edit;
 
 /*
 |--------------------------------------------------------------------------
@@ -108,6 +109,11 @@ Route::get('/contact', function () {
     return view('contact', compact('configs'));
 })->name('contact');
 
+Route::controller(edit::class)->group(function (){
+    Route::get('/edit/{table}/{id}/{grupp}', [edit::class, 'index'])->name('edit');
+});
+
 Route::controller(srsingle::class)->group(function (){
     Route::get('/ser-single/{id}', [srsingle::class, 'index'])->name('ser-single');
+    Route::get('/gallerySingle/{id}', [srsingle::class, 'gallerySingle'])->name('gallery-single');
 });

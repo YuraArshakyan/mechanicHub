@@ -47,6 +47,9 @@
 <!--Start faqs content area-->
 <section class="faq-content-area">
     <div class="container">
+        <div class="button pull-right_edit" style="margin-top: 10px; margin-bottom: 10px;">
+            <a class="thm-btn" href="{{url('edit'. '/' . 'photos' . '/' . 100 . '/' . 2)}}">Add</a>
+        </div>
         <div class="row">
             <div class="faq-content masonary-layout">
                 @foreach($qa as $qa)
@@ -59,6 +62,12 @@
                             <div class="text">
                                 <p>{{$qa->answer}}</p>
                             </div>
+                        </div>
+                        <div class="button pull-right_edit">
+                            <a class="thm-btn" href="{{url('edit'. '/' . 'photos' . '/' . $qa->id . '/' . 4)}}">Edit</a>
+                        </div>
+                        <div class="button pull-right_edit" style="margin-top: 10px; margin-bottom: 10px;">
+                            <a class="thm-btn" href="{{url('edit'. '/' . 'photos' . '/' . $qa->id . '/' . 4)}}">Delete</a>
                         </div>
                     </div>
                     <!--End single item-->

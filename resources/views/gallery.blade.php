@@ -68,8 +68,14 @@
                                     <a class="zoom" href="images/projects/{{$gallery->photo}}" data-rel="prettyPhoto" title="MechanicHub Project">
                                         <i class="fa fa-search" aria-hidden="true"></i>
                                     </a>
+                                    <a class="zoom" href="{{url('edit'. '/' . 'gallery'  . '/' . $gallery->id . '/' . 6)}}">
+                                        <i class="fa fa-edit" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="zoom" href="{{url('edit'. '/' . 'gallery'  . '/' . $gallery->id . '/' . 6)}}" data-rel="prettyPhoto" title="MechanicHub Project">
+                                        <i class="fa fa-delete" aria-hidden="true">delete</i>
+                                    </a>
                                     <div class="bottom">
-                                        <a href="gallery-single.html">{{$gallery->category}}</a>
+                                        <a href="{{route('gallery-single',$gallery->id)}}">{{$gallery->category}}</a>
                                         <p>Repairs</p>
                                     </div>
                                 </div>
@@ -80,14 +86,6 @@
             @endforeach
             <!--End single project item-->
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="load-more-button">
-                    <a href="#">Load More</a>
-                </div>
-            </div>
-        </div>
-
     </div>
 </section>
 <!--End project area-->

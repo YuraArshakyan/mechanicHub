@@ -82,10 +82,23 @@
                                 <img src="images/testimonial/{{$review->car}}" alt="Awesome Image">
                             </div>
                         </div>
+                        <div class="col-xs-12">
+                            <div class="button pull-right_edit pull-right col-xs-5">
+                                <a class="thm-btn" href="#">Delete</a>
+                            </div>
+                            <div class="button pull-right_edit pull-left col-xs-5">
+                                <a class="thm-btn" href="{{url('edit'. '/' . 'reviews' . '/' . $review->id . '/' . 4)}}">Edit</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!--End single item-->
             @endforeach
+                <div class="col-xs-12">
+                    <div class="button pull-right_edit">
+                        <a class="thm-btn" href="#">Add</a>
+                    </div>
+                </div>
         </div>
     </div>
 </section>

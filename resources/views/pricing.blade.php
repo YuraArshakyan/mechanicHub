@@ -74,6 +74,12 @@
                             <a class="thm-btn" href="#">Book Now</a>
                         </div>
                     </div>
+                    <div class="button pull-right_edit">
+                        <a class="thm-btn" href="{{url('edit'. '/' . 'prices' . '/' . $price->id . '/' . 3)}}">Edit</a>
+                    </div>
+                    <div class="button pull-right_edit" style="margin-top: 10px">
+                        <a class="thm-btn" href="{{url('edit'. '/' . 'prices' . '/' . $price->id . '/' . 3)}}">Delete</a>
+                    </div>
                 </div>
             @endforeach
             <!--End single price box-->

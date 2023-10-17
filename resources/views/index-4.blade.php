@@ -546,7 +546,7 @@
     <!--End testimonial area v2-->
 
     <!--Start latest blog area-->
-    @include('common.lastNews')
+{{--    @include('common.lastNews')--}}
     <!--End latest blog area-->
 
     <!--Start model area-->

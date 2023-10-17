@@ -27,7 +27,7 @@
 <section class="header-area style-three">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-13">
                     <!--Start logo-->
                     <div class="logo pull-left">
                         <a href="index.html">
@@ -35,24 +35,24 @@
                         </a>
                     </div>
                     <!--End logo-->
-                    <div class="header-contact-info pull-left">
+                    <div class="header-contact-info pull-left col-lg-6">
                         <ul>
-                            <li>
+                            <li class="col-lg-7">
                                 <div class="icon-holder">
                                     <span class="flaticon-tool"></span>
                                 </div>
                                 <div class="text-holder">
                                     <h3>Address:</h3>
-                                    <span>Rock St 12, Newyork, USA.</span>
+                                    <span>{{$configs[5]->value}}</span>
                                 </div>
                             </li>
                             <li>
                                 <div class="icon-holder">
-                                    <span class="flaticon-envelope"></span>
+                                    <span class="flaticon-phone-receiver"></span>
                                 </div>
                                 <div class="text-holder">
-                                    <h3>Email:</h3>
-                                    <span>Mail@MechanicHub.com</span>
+                                    <h3>phone:</h3>
+                                    <span>{{$configs[0]->value}}</span>
                                 </div>
                             </li>
                         </ul>

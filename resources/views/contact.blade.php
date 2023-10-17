@@ -41,7 +41,7 @@
     <div class="container">
         <div class="row">
             <!--Start single item-->
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="single-item hvr-grow-shadow text-center">
                     <div class="icon-holder">
                         <span class="flaticon-magnifying-glass"></span>
@@ -49,13 +49,14 @@
                     <div class="text-holder">
                         <h3>Visit Our Place</h3>
                         <span class="border"></span>
-                        {!!nl2br(str_replace(' ','&nbsp;', $configs[5]->value))!!}
+                        <p>{!!nl2br(str_replace(' ','&nbsp;', $configs[5]->value))!!}</p>
+                        <a class="thm-btn btn-primary" href="{{url('edit'. '/' . 'Location' . '/' . 6 . '/' . 7)}}">Edit</a>
                     </div>
                 </div>
             </div>
             <!--End single item-->
             <!--Start single item-->
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="single-item hvr-grow-shadow text-center">
                     <div class="icon-holder">
                         <span class="flaticon-telephone"></span>
@@ -64,23 +65,25 @@
                         <h3>Quick Contact</h3>
                         <span class="border"></span>
                         <p>Ph: {{$configs[0]->value}}<br> Email: {{$configs[1]->value}}</p>
+                        <a class="thm-btn btn-primary" href="{{url('edit'. '/' . 'contacts' . '/' . 1 . '/' . 7)}}">Edit</a>
                     </div>
                 </div>
             </div>
             <!--End single item-->
             <!--Start single item-->
-            <div class="col-md-4">
-                <div class="single-item hvr-grow-shadow text-center">
-                    <div class="icon-holder">
-                        <span class="flaticon-transport"></span>
-                    </div>
-                    <div class="text-holder">
-                        <h3>Tow - Truck</h3>
-                        <span class="border"></span>
-                        <p>We have Truck Tow service also, our team<br> ready to help you 24/7.</p>
-                    </div>
-                </div>
-            </div>
+{{--            <div class="col-md-4">--}}
+{{--                <div class="single-item hvr-grow-shadow text-center">--}}
+{{--                    <div class="icon-holder">--}}
+{{--                        <span class="flaticon-transport"></span>--}}
+{{--                    </div>--}}
+{{--                    <div class="text-holder">--}}
+{{--                        <h3>Tow - Truck</h3>--}}
+{{--                        <span class="border"></span>--}}
+{{--                        <p>We have Truck Tow service also, our team<br> ready to help you 24/7.</p>--}}
+{{--                    </div>--}}
+{{--                    <a class="thm-btn btn-primary" href="{{url('edit'. '/' . 'contacts' . '/' . 2 . '/' . 7)}}">Edit</a>--}}
+{{--                </div>--}}
+{{--            </div>--}}
             <!--End single item-->
         </div>
     </div>
@@ -139,6 +142,7 @@
                             <ul class="working-hours">
                                 {!!$configs[6]->value!!}
                             </ul>
+                            <a class="thm-btn btn-primary" href="{{url('edit'. '/' . 'contacts' . '/' . 7 . '/' . 7)}}">Edit</a>
                         </div>
                     </div>
 
