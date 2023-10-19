@@ -351,12 +351,6 @@ button{
           animation-timing-function: ease-out;
 }
 
-.pull-right_edit{
-    color: black;
-    background-color: brown;
-    border-radius: 30px;
-}
-
 
 
 /*
@@ -1398,7 +1392,7 @@ select:focus {
     font-size: 14px;
 }
 .appoinment-area .appoinment .appoinment-form .input-box input[type=text],
-.appoinment-area .appoinment .appoinment-form .input-box input[type=email]{
+.appoinment-area .appoinment .appoinment-form .input-box input[type=number]{
     background: #303443;
     width: 100%;
     border: 1px solid #3b3f4f;
@@ -1414,7 +1408,7 @@ select:focus {
 .appoinment-area .appoinment .appoinment-form .input-box input[type=text]:focus{
     border-color: #233588;
 }
-.appoinment-area .appoinment .appoinment-form .input-box input[type=email]:focus{
+.appoinment-area .appoinment .appoinment-form .input-box input[type=number]:focus{
     border-color: #233588;
 }
 .appoinment-area .appoinment .appoinment-form button {
@@ -3199,7 +3193,7 @@ select:focus {
     border: 1px solid #f4f4f4;
 }
 .appoinment-area.style-two .appoinment .appoinment-form .input-box input[type=text],
-.appoinment-area.style-two .appoinment .appoinment-form .input-box input[type=email],
+.appoinment-area.style-two .appoinment .appoinment-form .input-box input[type=number],
 .appoinment-area.style-two .appoinment .appoinment-form .input-box textarea{
     background: #ffffff;
     width: 100%;
@@ -4559,6 +4553,22 @@ select:focus {
     transition: all 500ms ease 0s;
     width: 432px;
 }
+.not-found-content .search-form input[type="password"] .search-form input[type="number"] {
+    background: #fff;
+    border: 1px solid #f1f1f1;
+    color: #9a9a9a;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 300;
+    height: 55px;
+    letter-spacing: 1px;
+    padding-left: 20px;
+    padding-right: 60px;
+    position: relative;
+    -webkit-transition: all 500ms ease 0s;
+    transition: all 500ms ease 0s;
+    width: 432px;
+}
 .not-found-content .search-form button {
     background: #233588 none repeat scroll 0 0;
     border: medium none;
@@ -4582,12 +4592,22 @@ select:focus {
     background: #fff;
     color: #000;
 }
+.not-found-content .search-form input[type="password"]:focus .search-form input[type="number"]:focus {
+    border: 1px solid #142573;
+    background: #fff;
+    color: #000;
+}
 .not-found-content .search-form input[type="text"]:focus + button,
 .not-found-content .search-form button:hover {
     background: #142573 none repeat scroll 0 0;
     color: #fff;
 }
-
+.not-found-content .search-form input[type="password"]:focus + button,
+.not-found-content .search-form input[type="number"]:focus + button,
+.not-found-content .search-form button:hover {
+    background: #142573 none repeat scroll 0 0;
+    color: #fff;
+}
 
 
 /***
@@ -5334,6 +5354,8 @@ select:focus {
 }
 .contact-form-area .contact-form form input[type="text"],
 .contact-form-area .contact-form form input[type="email"],
+.contact-form-area .contact-form form input[type="password"],
+.contact-form-area .contact-form form input[type="number"],
 .contact-form-area .contact-form form textarea{
     background: #ffffff;
     border: 1px solid #f4f4f4;
@@ -5352,6 +5374,12 @@ select:focus {
     padding: 10px 20px;
 }
 .contact-form-area .contact-form form input[type="text"]:focus{
+    border-color: #233588;
+}
+.contact-form-area .contact-form form input[type="password"]:focus{
+    border-color: #233588;
+}
+.contact-form-area .contact-form form input[type="number"]:focus{
     border-color: #233588;
 }
 .contact-form-area .contact-form form input[type="email"]:focus{
@@ -5441,7 +5469,7 @@ select:focus {
 .sidebar-wrapper .single-sidebar form.search-form {
     position: relative
 }
-.sidebar-wrapper .single-sidebar .search-form input[type="text"] {
+.sidebar-wrapper .single-sidebar .search-form input[type="text"] .input[type="password"] .input[type="number"]{
     background: #fff;
     border: 1px solid #f7f7f7;
     color: #ababab;
@@ -5474,7 +5502,7 @@ select:focus {
 .sidebar-wrapper .single-sidebar .search-form button i {
   font-size: 14px
 }
-.sidebar-wrapper .single-sidebar .search-form input[type="text"]:focus {
+.sidebar-wrapper .single-sidebar .search-form input[type="text"]:focus input[type="password"]:focus input[type="number"]:focus{
   border: 1px solid #233588;
   background: #fff;
   color: #000;
@@ -5484,7 +5512,12 @@ select:focus {
     background: #233588 none repeat scroll 0 0;
     color: #ddd;
 }
-
+.sidebar-wrapper .single-sidebar .search-form input[type="password"]:focus + button,
+.sidebar-wrapper .single-sidebar .search-form input[type="number"]:focus + button,
+.sidebar-wrapper .single-sidebar .search-form button:hover {
+    background: #233588 none repeat scroll 0 0;
+    color: #ddd;
+}
 .single-sidebar .categories {
     background: #ffffff;
     display: block;
@@ -5987,6 +6020,8 @@ select:focus {
 }
 .blog-single-area .add-comment-box #add-comment-form input[type="text"],
 .blog-single-area .add-comment-box #add-comment-form input[type="email"],
+.blog-single-area .add-comment-box #add-comment-form input[type="password"],
+.blog-single-area .add-comment-box #add-comment-form input[type="number"],
 .blog-single-area .add-comment-box #add-comment-form textarea{
     background: #f7f7f7 none repeat scroll 0 0;
     border: 1px solid transparent;

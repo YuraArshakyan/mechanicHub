@@ -4,108 +4,115 @@
 <body>
 <div class="boxed_wrapper">
 
-<!--Start Preloader -->
-<div class="preloader"></div>
-<!--End Preloader -->
+    <!--Start Preloader -->
+    <div class="preloader"></div>
+    <!--End Preloader -->
 
-<!--Start top bar area-->
-@include('common.1.topbar')
-<!--End top bar area-->
+    <!--Start top bar area-->
+    @include('common.1.topbar')
+    <!--End top bar area-->
 
-<!--Start mainmenu area-->
-@section('activePage2', 'current')
-@include('common.1.mainmenue')
-<!--End mainmenu area-->
+    <!--Start mainmenu area-->
+    @section('activePage2', 'current')
+    @include('common.'.$configs[7] -> value.'.mainmenue'.$configs[7] -> value)
+    <!--End mainmenu area-->
 
-<!--Start breadcrumb area-->
-<section class="breadcrumb-area" style="background-image: url(images/resources/breadcrumb-bg.jpg);">
-	<div class="container">
-	    <div class="row">
-	        <div class="col-md-12">
-	            <div class="breadcrumbs">
-	                <h1>Meet Our Experts</h1>
-	            </div>
-	        </div>
-	    </div>
-	</div>
-    <div class="breadcrumb-botton">
+    <!--Start breadcrumb area-->
+    <section class="breadcrumb-area" style="background-image: url(images/resources/breadcrumb-bg.jpg);">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <ul class="left">
-                        <li><a href="index.html">Home</a></li>
-                        <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
-                        <li class="active">Meet Our Experts</li>
-                    </ul>
+                    <div class="breadcrumbs">
+                        <h1>Meet Our Experts</h1>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!--End breadcrumb area-->
-
-<!--Start team page area-->
-<section class="team-page-area">
-    <div class="container">
-        <div class="button pull-right_edit">
-            <a class="thm-btn" href="#">add</a>
+        <div class="breadcrumb-botton">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="left">
+                            <li><a href="index.html">Home</a></li>
+                            <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                            <li class="active">Meet Our Experts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-        <br>
-        <div class="row masonary-layout">
-            <!--Start single team member-->
-            @foreach($photos as $photo)
-                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                    <div class="single-team-member">
-                        <div class="img-holder">
-                            <img src="images/team/{{$photo->photo}}" alt="Awesome Image">
-                            <div class="overlay-style-one">
-                                <div class="box">
-                                    <div class="content">
-                                        <ul>
-                                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                        </ul>
+    </section>
+    <!--End breadcrumb area-->
+
+    <!--Start team page area-->
+    <section class="team-page-area">
+        <div class="container">
+            @auth()
+                <div class="">
+                    <a class="thm-btn btn-success" href="#">add</a>
+                </div>
+            @endauth
+            <br>
+            <div class="row masonary-layout">
+                <!--Start single team member-->
+                @foreach($photos as $photo)
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <div class="single-team-member">
+                            <div class="img-holder">
+                                <img src="images/team/{{$photo->photo}}" alt="Awesome Image" style="width: 270px; height: 280px;">
+                                <div class="overlay-style-one">
+                                    <div class="box">
+                                        <div class="content">
+                                            <ul>
+                                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                                </li>
+                                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                                </li>
+                                                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="text-holder">
-                            {!!@$photo->text!!}
-                            <div class="bottom">
-                                {!!@$photo->text2!!}
+                            <div class="text-holder">
+                                {!!@$photo->text!!}
+                                <div class="bottom">
+                                    {!!@$photo->text2!!}
+                                </div>
                             </div>
-                        </div>
-                        <div class="button pull-right_edit">
-                            <a class="thm-btn" href="{{url('edit'. '/' . 'photos' . '/' . $photo->id . '/' . 2)}}">Edit</a>
-                        </div>
-                        <br>
-                        <div class="button pull-right_edit">
-                            <a class="thm-btn" href="#">delete</a>
+                            @auth()
+                                <div class="">
+                                    <a class="thm-btn btn-info" href="{{url('edit'. '/' . 'photos' . '/' . $photo->id . '/' . 2)}}">Edit</a>
+                                </div>
+                                <br>
+                                <div class="">
+                                    <a class="thm-btn btn-danger" href="#">delete</a>
+                                </div>
+                            @endauth
                         </div>
                     </div>
-                </div>
-            @endforeach
-            <!--End single team member-->
-            <!--Start single team member-->
-            <!--End single team member-->
-            <!--Start single team member-->
-            <!--End single team member-->
-            <!--Start single team member-->
-            <!--End single team member-->
+                @endforeach
+                <!--End single team member-->
+                <!--Start single team member-->
+                <!--End single team member-->
+                <!--Start single team member-->
+                <!--End single team member-->
+                <!--Start single team member-->
+                <!--End single team member-->
 
-            <!--Start single team member-->
-            <!--End single team member-->
-            <!--Start single team member-->
-            <!--End single team member-->
+                <!--Start single team member-->
+                <!--End single team member-->
+                <!--Start single team member-->
+                <!--End single team member-->
+            </div>
         </div>
-    </div>
-</section>
-<!--End team page area-->
+    </section>
+    <!--End team page area-->
 
-<!--Start footer area-->
-@include('common.footer')
-<!--End footer bottom area-->
+    <!--Start footer area-->
+    @include('common.footer')
+    <!--End footer bottom area-->
 
 </div>
 
@@ -169,12 +176,8 @@
 <script src="assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
 
 
-
 <!-- thm custom script -->
 <script src="js/custom.js"></script>
-
-
-
 
 
 </body>

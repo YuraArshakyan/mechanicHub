@@ -14,7 +14,7 @@
 
 <!--Start mainmenu area-->
 @section('activePage2', 'current')
-@include('common.1.mainmenue')
+@include('common.'.$configs[7] -> value.'.mainmenue'.$configs[7] -> value)
 <!--End mainmenu area-->
 
 <!--Start breadcrumb area-->
@@ -87,7 +87,7 @@
             <div class="col-md-4">
                 <div class="single-box">
                     <div class="top">
-                        <h3><span class="flaticon-location-pin"></span>24/7 Customer Support</h3>
+                        <h3><span class="flaticon-location-pin"></span>Location</h3>
                     </div>
                     <div class="text">
                         <h1>{{$configs[5]->value}}</h1>

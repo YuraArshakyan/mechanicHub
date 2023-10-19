@@ -12,6 +12,7 @@ use App\Http\Controllers\srsingle;
 use App\Models\galerys;
 use App\Models\configs;
 use App\Http\Controllers\edit;
+use App\Http\Controllers\appointment;
 
 /*
 |--------------------------------------------------------------------------
@@ -79,6 +80,12 @@ Route::get('/pricing', function () {
     return view('pricing', compact('prices', 'configs'));
 })->name('pricing');
 
+Route::get('/A_log', function () {
+    $configs = configs::all();
+    $prices = prices::all();
+    return view('A_log', compact('prices', 'configs'));
+})->name('A_log');
+
 Route::get('/testimonials', function () {
     $configs = configs::all();
     $reviews = reviews::all();
@@ -111,9 +118,18 @@ Route::get('/contact', function () {
 
 Route::controller(edit::class)->group(function (){
     Route::get('/edit/{table}/{id}/{grupp}', [edit::class, 'index'])->name('edit');
+    Route::put('/update/{grupp}/{id}/{id2}', [edit::class, 'update'])->name('update');
+//    Route::post('/register', [edit::class, 'register'])->name('register');
+    Route::get('/login', [edit::class, 'login'])->name('login');
+    Route::get('/logout', [edit::class, 'logout'])->name('logout');
 });
 
 Route::controller(srsingle::class)->group(function (){
     Route::get('/ser-single/{id}', [srsingle::class, 'index'])->name('ser-single');
     Route::get('/gallerySingle/{id}', [srsingle::class, 'gallerySingle'])->name('gallery-single');
+});
+
+Route::controller(appointment::class)->group(function (){
+    Route::get('/appointment', [appointment::class, 'index'])->name('appointment');
+    Route::get('/message', [appointment::class, 'message'])->name('message');
 });

@@ -4,82 +4,86 @@
 <body>
 <div class="boxed_wrapper">
 
-<!--Start Preloader -->
-<div class="preloader"></div>
-<!--End Preloader -->
+    <!--Start Preloader -->
+    <div class="preloader"></div>
+    <!--End Preloader -->
 
-<!--Start top bar area-->
-@include('common.1.topbar')
-<!--End top bar area-->
+    <!--Start top bar area-->
+    @include('common.1.topbar')
+    <!--End top bar area-->
 
-<!--Start mainmenu area-->
-@section('activePage2', 'current')
-@include('common.1.mainmenue')
-<!--End mainmenu area-->
+    <!--Start mainmenu area-->
+    @section('activePage2', 'current')
+    @include('common.'.$configs[7] -> value.'.mainmenue'.$configs[7] -> value)
+    <!--End mainmenu area-->
 
-<!--Start breadcrumb area-->
-<section class="breadcrumb-area" style="background-image: url(images/resources/breadcrumb-bg.jpg);">
-	<div class="container">
-	    <div class="row">
-	        <div class="col-md-12">
-	            <div class="breadcrumbs">
-	                <h1>FAQ’s</h1>
-	            </div>
-	        </div>
-	    </div>
-	</div>
-    <div class="breadcrumb-botton">
+    <!--Start breadcrumb area-->
+    <section class="breadcrumb-area" style="background-image: url(images/resources/breadcrumb-bg.jpg);">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <ul class="left">
-                        <li><a href="index.html">Home</a></li>
-                        <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
-                        <li class="active">FAQ’s</li>
-                    </ul>
+                    <div class="breadcrumbs">
+                        <h1>FAQ’s</h1>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!--End breadcrumb area-->
-
-<!--Start faqs content area-->
-<section class="faq-content-area">
-    <div class="container">
-        <div class="button pull-right_edit" style="margin-top: 10px; margin-bottom: 10px;">
-            <a class="thm-btn" href="{{url('edit'. '/' . 'photos' . '/' . 100 . '/' . 2)}}">Add</a>
-        </div>
-        <div class="row">
-            <div class="faq-content masonary-layout">
-                @foreach($qa as $qa)
-                    <!--Start single item-->
-                    <div class="col-md-6">
-                        <div class="single-item">
-                            <div class="title">
-                                <h3>{{$qa->question}}</h3>
-                            </div>
-                            <div class="text">
-                                <p>{{$qa->answer}}</p>
-                            </div>
-                        </div>
-                        <div class="button pull-right_edit">
-                            <a class="thm-btn" href="{{url('edit'. '/' . 'photos' . '/' . $qa->id . '/' . 4)}}">Edit</a>
-                        </div>
-                        <div class="button pull-right_edit" style="margin-top: 10px; margin-bottom: 10px;">
-                            <a class="thm-btn" href="{{url('edit'. '/' . 'photos' . '/' . $qa->id . '/' . 4)}}">Delete</a>
-                        </div>
+        <div class="breadcrumb-botton">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="left">
+                            <li><a href="index.html">Home</a></li>
+                            <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                            <li class="active">FAQ’s</li>
+                        </ul>
                     </div>
-                    <!--End single item-->
-                @endforeach
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<!--End faqs content area-->
+    </section>
+    <!--End breadcrumb area-->
 
-<!--Start footer area-->
-@include('common.footer')
+    <!--Start faqs content area-->
+    <section class="faq-content-area">
+        <div class="container">
+            @auth()
+                <div class="" style="margin-top: 10px; margin-bottom: 10px;">
+                    <a class="thm-btn btn-success" href="{{url('edit'. '/' . 'photos' . '/' . 100 . '/' . 2)}}">Add</a>
+                </div>
+            @endauth
+            <div class="row">
+                <div class="faq-content masonary-layout">
+                    @foreach($qa as $qa)
+                        <!--Start single item-->
+                        <div class="col-md-6">
+                            <div class="single-item">
+                                <div class="title">
+                                    <h3>{{$qa->question}}</h3>
+                                </div>
+                                <div class="text">
+                                    <p>{{$qa->answer}}</p>
+                                </div>
+                            </div>
+                            @auth()
+                                <div class="">
+                                    <a class="thm-btn btn-info" href="{{url('edit'. '/' . 'photos' . '/' . $qa->id . '/' . 4)}}">Edit</a>
+                                </div>
+                                <div class="" style="margin-top: 10px; margin-bottom: 10px;">
+                                    <a class="thm-btn btn-danger" href="{{url('edit'. '/' . 'photos' . '/' . $qa->id . '/' . 4)}}">Delete</a>
+                                </div>
+                            @endauth
+                        </div>
+                        <!--End single item-->
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End faqs content area-->
+
+    <!--Start footer area-->
+    @include('common.footer')
 </div>
 
 <!--Scroll to top-->
@@ -142,12 +146,8 @@
 <script src="assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
 
 
-
 <!-- thm custom script -->
 <script src="js/custom.js"></script>
-
-
-
 
 
 </body>

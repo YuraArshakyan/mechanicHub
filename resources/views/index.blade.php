@@ -12,7 +12,7 @@
     <!--End top bar area-->
 
     <!--Start mainmenu area-->
-    @include('common.1.mainmenue')
+    @include('common.'.$configs[7] -> value.'.mainmenue'.$configs[7] -> value)
     @section('activePage1', 'current')
     <!--End mainmenu area-->
 
@@ -205,17 +205,16 @@
             <div class="row mar0">
                 <!--Start single project item-->
                 <div class="single-project-item span-20per">
-                    <div class="img-holder">
+                    <div class="img-holder" style="min-height: 252px;">
                         <img src="images/projects/1.jpg" alt="Awesome Image">
                         <div class="overlay-style-one">
                             <div class="box">
                                 <div class="content">
-                                    <a class="zoom" href="images/projects/1.jpg" data-rel="prettyPhoto"
-                                       title="MechanicHub Project">
+                                    <a class="zoom" href="images/projects/1.jpg" data-rel="prettyPhoto" title="MechanicHub Project">
                                         <i class="fa fa-search" aria-hidden="true"></i>
                                     </a>
                                     <div class="bottom">
-                                        <a href="gallery-single.html">Replace The Air Filter</a>
+                                        <a href="{{route('gallery-single',1)}}">Replace The Air Filter</a>
                                         <p>Repairs</p>
                                     </div>
                                 </div>
@@ -236,7 +235,7 @@
                                         <i class="fa fa-search" aria-hidden="true"></i>
                                     </a>
                                     <div class="bottom">
-                                        <a href="gallery-single.html">Replace The Air Filter</a>
+                                        <a href="{{route('gallery-single', 2)}}">Replace The Air Filter</a>
                                         <p>Repairs</p>
                                     </div>
                                 </div>
@@ -257,7 +256,7 @@
                                         <i class="fa fa-search" aria-hidden="true"></i>
                                     </a>
                                     <div class="bottom">
-                                        <a href="gallery-single.html">Replace The Air Filter</a>
+                                        <a href="{{route('gallery-single', 3)}}">Replace The Air Filter</a>
                                         <p>Repairs</p>
                                     </div>
                                 </div>
@@ -278,7 +277,7 @@
                                         <i class="fa fa-search" aria-hidden="true"></i>
                                     </a>
                                     <div class="bottom">
-                                        <a href="gallery-single.html">Replace The Air Filter</a>
+                                        <a href="{{route('gallery-single', 4)}}">Replace The Air Filter</a>
                                         <p>Repairs</p>
                                     </div>
                                 </div>
@@ -299,7 +298,7 @@
                                         <i class="fa fa-search" aria-hidden="true"></i>
                                     </a>
                                     <div class="bottom">
-                                        <a href="gallery-single.html">Replace The Air Filter</a>
+                                        <a href="{{route('gallery-single', 5)}}">Replace The Air Filter</a>
                                         <p>Repairs</p>
                                     </div>
                                 </div>
@@ -340,7 +339,7 @@
                 <!--Start single item-->
                 <div class="col-md-4">
                     <div class="single-testimonial-item">
-                        <div class="img-holder">
+                        <div class="img-holder" style="min-height: 250px;">
                             <img src="images/testimonial/1.jpg" alt="Awesome Image">
                         </div>
                         <div class="top">
@@ -452,7 +451,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="more-button">
-                        <a href="#">See more reviews</a>
+                        <a href="{{route('testimonials')}}">See more reviews</a>
                     </div>
                 </div>
             </div>
@@ -470,7 +469,7 @@
                             <h1>Get an Appoinment</h1>
                             <span class="border"></span>
                         </div>
-                        <form class="appoinment-form">
+                        <form action="{{route('appointment')}}" method="get" class="appoinment-form">
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="input-label">
@@ -482,15 +481,15 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="input-label">
-                                        <label>Email*</label>
+                                        <label>phone*</label>
                                     </div>
                                     <div class="input-box">
-                                        <input type="email" name="mail" placeholder="">
+                                        <input type="number" name="phone" placeholder="">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="input-label">
-                                        <label>Make / Model</label>
+                                        <label>Make / Model / Year</label>
                                     </div>
                                     <div class="input-box">
                                         <input type="text" name="model" placeholder="">
@@ -503,7 +502,7 @@
                                         <label>Services*</label>
                                     </div>
                                     <div class="input-box">
-                                        <select class="selectmenu">
+                                        <select class="selectmenu" name="service">
                                             <option selected="selected">Select services</option>
                                             <option>Wheel Works</option>
                                             <option>Air Conditioner</option>
@@ -562,9 +561,9 @@
     </section>
     <!--End appoinment area-->
 
-{{--    <!--Start latest blog area-->--}}
-{{--    @include('common.lastNews')--}}
-{{--    <!--End latest blog area-->--}}
+    {{--    <!--Start latest blog area-->--}}
+    {{--    @include('common.lastNews')--}}
+    {{--    <!--End latest blog area-->--}}
 
     <!--Start model area-->
     @include('common.models')

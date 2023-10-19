@@ -4,97 +4,104 @@
 <body>
 <div class="boxed_wrapper">
 
-<!--Start Preloader -->
-<div class="preloader"></div>
-<!--End Preloader -->
+    <!--Start Preloader -->
+    <div class="preloader"></div>
+    <!--End Preloader -->
 
-<!--Start top bar area-->
-@include('common.1.topbar')
-<!--End top bar area-->
+    <!--Start top bar area-->
+    @include('common.1.topbar')
+    <!--End top bar area-->
 
-<!--Start mainmenu area-->
-@section('activePage2', 'current')
-@include('common.1.mainmenue')
-<!--End mainmenu area-->
+    <!--Start mainmenu area-->
+    @section('activePage2', 'current')
+    @include('common.'.$configs[7] -> value.'.mainmenue'.$configs[7] -> value)
+    <!--End mainmenu area-->
 
-<!--Start breadcrumb area-->
-<section class="breadcrumb-area" style="background-image: url(images/resources/breadcrumb-bg.jpg);">
-	<div class="container">
-	    <div class="row">
-	        <div class="col-md-12">
-	            <div class="breadcrumbs">
-	                <h1>Pricing Table</h1>
-	            </div>
-	        </div>
-	    </div>
-	</div>
-    <div class="breadcrumb-botton">
+    <!--Start breadcrumb area-->
+    <section class="breadcrumb-area" style="background-image: url(images/resources/breadcrumb-bg.jpg);">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <ul class="left">
-                        <li><a href="index.html">Home</a></li>
-                        <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
-                        <li class="active">Pricing Table</li>
-                    </ul>
+                    <div class="breadcrumbs">
+                        <h1>Pricing Table</h1>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!--End breadcrumb area-->
-
-<!--Start pricing plan area-->
-<section class="pricing-plan-area">
-    <div class="container">
-        <div class="sec-title text-center">
-            <h1>Pricing & Valuable Plans</h1>
-            <span class="border center"></span>
-            <p>These rates provide a fair estimation of how our services are priced. The minimum per visit charges shall be applicable for each service.</p>
-        </div>
-        <div class="row">
-            <!--Start single price box-->
-            @foreach($prices as $price)
-                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 text-center">
-                    <div class="single-price-box">
-                        <div class="table-header">
-                            <div class="top">
-                                <h3>{{$price->title}}</h3>
-                            </div>
-                            <div class="package">
-                                <h1><b>$</b>{{$price->price}}<span>/Mo</span></h1>
-                            </div>
-                        </div>
-                        <div class="price-list">
-                            <ul>
-                                {!! $price->services !!}
-                            </ul>
-                        </div>
-                        <div class="table-footer">
-                            <a class="thm-btn" href="#">Book Now</a>
-                        </div>
-                    </div>
-                    <div class="button pull-right_edit">
-                        <a class="thm-btn" href="{{url('edit'. '/' . 'prices' . '/' . $price->id . '/' . 3)}}">Edit</a>
-                    </div>
-                    <div class="button pull-right_edit" style="margin-top: 10px">
-                        <a class="thm-btn" href="{{url('edit'. '/' . 'prices' . '/' . $price->id . '/' . 3)}}">Delete</a>
+        <div class="breadcrumb-botton">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="left">
+                            <li><a href="index.html">Home</a></li>
+                            <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                            <li class="active">Pricing Table</li>
+                        </ul>
                     </div>
                 </div>
-            @endforeach
-            <!--End single price box-->
-            <!--Start single price box-->
-            <!--End single price box-->
-            <!--Start single price box-->
-            <!--End single price box-->
-
+            </div>
         </div>
-    </div>
-</section>
-<!--End pricing plan area-->
+    </section>
+    <!--End breadcrumb area-->
 
-<!--Start footer area-->
-@include('common.footer')
+    <!--Start pricing plan area-->
+    <section class="pricing-plan-area">
+        <div class="container">
+            <div class="sec-title text-center">
+                <h1>Pricing & Valuable Plans</h1>
+                <span class="border center"></span>
+                <p>These rates provide a fair estimation of how our services are priced. The minimum per visit charges
+                    shall be applicable for each service.</p>
+            </div>
+            <div class="row">
+                <!--Start single price box-->
+                @foreach($prices as $price)
+                    <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 text-center">
+                        <div class="single-price-box">
+                            <div class="table-header">
+                                <div class="top">
+                                    <h3>{{$price->title}}</h3>
+                                </div>
+                                <div class="package">
+                                    <h1><b>$</b>{{$price->price}}<span>/Mo</span></h1>
+                                </div>
+                            </div>
+                            <div class="price-list">
+                                <ul>
+                                    {!! $price->services !!}
+                                </ul>
+                            </div>
+                            <div class="table-footer">
+                                <a class="thm-btn" href="#">Book Now</a>
+                            </div>
+                        </div>
+                        @auth()
+                            <div class="">
+                                <a class="thm-btn btn-info" href="{{url('edit'. '/' . 'prices' . '/' . $price->id . '/' . 3)}}">Edit</a>
+                            </div>
+                            <div class="" style="margin-top: 10px">
+                                <a class="thm-btn btn-danger" href="{{url('edit'. '/' . 'prices' . '/' . $price->id . '/' . 3)}}">Delete</a>
+                            </div>
+                        @endauth
+                    </div>
+                @endforeach
+                <!--End single price box-->
+                <!--Start single price box-->
+                <!--End single price box-->
+                <!--Start single price box-->
+                <!--End single price box-->
+            </div>
+            @auth()
+                <div class="" style="margin-top: 10px">
+                    <a class="thm-btn btn-success" href="{{url('edit'. '/' . 'prices' . '/' . $price->id . '/' . 3)}}">Add</a>
+                </div>
+            @endauth
+        </div>
+    </section>
+    <!--End pricing plan area-->
+
+    <!--Start footer area-->
+    @include('common.footer')
 
 </div>
 
@@ -158,12 +165,8 @@
 <script src="assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
 
 
-
 <!-- thm custom script -->
 <script src="js/custom.js"></script>
-
-
-
 
 
 </body>

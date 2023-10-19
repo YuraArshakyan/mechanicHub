@@ -4,108 +4,112 @@
 <body>
 <div class="boxed_wrapper">
 
-<!--Start Preloader -->
-<div class="preloader"></div>
-<!--End Preloader -->
+    <!--Start Preloader -->
+    <div class="preloader"></div>
+    <!--End Preloader -->
 
-<!--Start top bar area-->
-@include('common.1.topbar')
-<!--End top bar area-->
+    <!--Start top bar area-->
+    @include('common.1.topbar')
+    <!--End top bar area-->
 
-<!--Start mainmenu area-->
-@section('activePage2', 'current')
-@include('common.1.mainmenue')
-<!--End mainmenu area-->
+    <!--Start mainmenu area-->
+    @section('activePage2', 'current')
+    @include('common.'.$configs[7] -> value.'.mainmenue'.$configs[7] -> value)
+    <!--End mainmenu area-->
 
-<!--Start breadcrumb area-->
-<section class="breadcrumb-area" style="background-image: url(images/resources/breadcrumb-bg.jpg);">
-	<div class="container">
-	    <div class="row">
-	        <div class="col-md-12">
-	            <div class="breadcrumbs">
-	                <h1>Customer Reviews</h1>
-	            </div>
-	        </div>
-	    </div>
-	</div>
-    <div class="breadcrumb-botton">
+    <!--Start breadcrumb area-->
+    <section class="breadcrumb-area" style="background-image: url(images/resources/breadcrumb-bg.jpg);">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <ul class="left">
-                        <li><a href="index.html">Home</a></li>
-                        <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
-                        <li class="active">Customer Reviews</li>
-                    </ul>
+                    <div class="breadcrumbs">
+                        <h1>Customer Reviews</h1>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!--End breadcrumb area-->
+        <div class="breadcrumb-botton">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="left">
+                            <li><a href="index.html">Home</a></li>
+                            <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                            <li class="active">Customer Reviews</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End breadcrumb area-->
 
-<!--Start testimonial area-->
-<section class="testimonial-page">
-    <div class="container">
-        <div class="row masonary-layout">
-            @foreach($reviews as $review)
-                <!--Start single item-->
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="single-testimonial-item">
-                        <div class="img-holder">
-                            <img src="images/testimonial/{{$review->photo}}" alt="Awesome Image">
-                        </div>
-                        <div class="top">
-                            <div class="left pull-left">
-                                <h3>{{$review->name}}</h3>
+    <!--Start testimonial area-->
+    <section class="testimonial-page">
+        <div class="container">
+            <div class="row masonary-layout">
+                @foreach($reviews as $review)
+                    <!--Start single item-->
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="single-testimonial-item">
+                            <div class="img-holder">
+                                <img src="images/testimonial/{{$review->photo}}" style="width: 370px; height: 250px" alt="Awesome Image">
                             </div>
-                            <div class="right pull-right">
-                                <div class="review-box">
-                                    <ul>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
+                            <div class="top">
+                                <div class="left pull-left">
+                                    <h3>{{$review->name}}</h3>
+                                </div>
+                                <div class="right pull-right">
+                                    <div class="review-box">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="text-holder">
-                            <p>{{$review->comment}}</p>
-                        </div>
-                        <div class="bottom">
-                            <div class="left pull-left">
-                                <h3>{{$review->services}}</h3>
+                            <div class="text-holder">
+                                <p>{{$review->comment}}</p>
                             </div>
-                            <div class="right pull-right">
-                                <img src="images/testimonial/{{$review->car}}" alt="Awesome Image">
+                            <div class="bottom">
+                                <div class="left pull-left">
+                                    <h3>{{$review->services}}</h3>
+                                </div>
+                                <div class="right pull-right">
+                                    <img src="images/testimonial/{{$review->car}}" alt="Awesome Image" style="width: 70px; height: 30px;">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-xs-12">
-                            <div class="button pull-right_edit pull-right col-xs-5">
-                                <a class="thm-btn" href="#">Delete</a>
-                            </div>
-                            <div class="button pull-right_edit pull-left col-xs-5">
-                                <a class="thm-btn" href="{{url('edit'. '/' . 'reviews' . '/' . $review->id . '/' . 10)}}">Edit</a>
-                            </div>
+                            @auth()
+                                <div class="col-xs-12">
+                                    <div class="pull-right col-xs-5">
+                                        <a class="thm-btn btn-danger" href="#">Delete</a>
+                                    </div>
+                                    <div class="pull-left col-xs-5">
+                                        <a class="thm-btn btn-info" href="{{url('edit'. '/' . 'reviews' . '/' . $review->id . '/' . 10)}}">Edit</a>
+                                    </div>
+                                </div>
+                            @endauth
                         </div>
                     </div>
-                </div>
-                <!--End single item-->
-            @endforeach
-                <div class="col-xs-12">
-                    <div class="button pull-right_edit">
-                        <a class="thm-btn" href="#">Add</a>
+                    <!--End single item-->
+                @endforeach
+                @auth()
+                    <div class="col-xs-12">
+                        <div class="">
+                            <a class="thm-btn btn-success" href="#">Add</a>
+                        </div>
                     </div>
-                </div>
+                @endauth
+            </div>
         </div>
-    </div>
-</section>
-<!--End testimonial area-->
+    </section>
+    <!--End testimonial area-->
 
-<!--Start footer area-->
-@include('common.footer')
+    <!--Start footer area-->
+    @include('common.footer')
 
 </div>
 
@@ -169,12 +173,8 @@
 <script src="assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
 
 
-
 <!-- thm custom script -->
 <script src="js/custom.js"></script>
-
-
-
 
 
 </body>

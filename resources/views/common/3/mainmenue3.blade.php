@@ -13,15 +13,17 @@
                     </div>
                     <div class="navbar-collapse collapse clearfix">
                         <ul class="navigation clearfix">
-                            <li class="dropdown current"><a href="/">Home</a>
-                                <ul>
-                                    <li><a href="{{route('home1')}}">Home One</a></li>
-                                    <li><a href="{{route('home2')}}">Home Two</a></li>
-                                    <li><a href="{{route('home3')}}">Home Three</a></li>
-                                    <li><a href="/">Home Four</a></li>
-                                </ul>
+                            <li @auth() class="dropdown @endauth @yield('activePage1')"><a href="{{route('home1')}}">Home</a>
+                                @auth()
+                                    <ul>
+                                        <li><a href="{{route('home1')}}">Home One</a></li>
+                                        <li><a href="{{route('home2')}}">Home Two</a></li>
+                                        <li><a href="{{route('home3')}}">Home Three</a></li>
+                                        <li><a href="/">Home Four</a></li>
+                                    </ul>
+                                @endauth
                             </li>
-                            <li class="dropdown"><a href="about.html">About us</a>
+                            <li class="dropdown @yield('activePage2')"><a href="about.html">About us</a>
                                 <ul>
                                     <li><a href="{{route('about')}}">About Mechanichub</a></li>
                                     <li><a href="{{route('team')}}">Meet Our Experts</a></li>
@@ -30,7 +32,7 @@
                                     <li><a href="{{route('faqs')}}">FAQ’s</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a href="{{route('services')}}">Services</a>
+                            <li class="dropdown @yield('activePage3')"><a href="{{route('services')}}">Services</a>
                                 <ul>
                                     <li><a href="{{route('services')}}">View All Services</a></li>
                                     <li><a href="{{route('ser-single', 1)}}">Wheel Works</a></li>
@@ -43,7 +45,7 @@
                                     <li><a href="{{route('ser-single', 8)}}">Belts & Hoses</a></li>
                                 </ul>
                             </li>
-                            <li><a href="{{route('gallery')}}">Gallery</a></li>
+                            <li class="@yield('activePage4')"><a href="{{route('gallery')}}">Gallery</a></li>
 {{--                            <li class="dropdown"><a href="gallery.html">Gallery</a>--}}
 {{--                                <ul>--}}
 {{--                                    <li><a href="{{route('gallery')}}">Fullwidth Gallery</a></li>--}}
@@ -66,19 +68,20 @@
 {{--                                    <li><a href="account.html">My Account</a></li>--}}
 {{--                                </ul>--}}
 {{--                            </li>--}}
-                            <li><a href="{{route('contact')}}">Contact Us</a></li>
+                            <li class="@yield('activePage5')"><a href="{{route('contact')}}">Contact Us</a></li>
 
-
-                            <li class="dropdown @yield('activePage3')"><a href="{{route('services')}}">Admin</a>
-                                <ul>
-                                    <li><a href="{{route('services')}}">Change carousel images</a></li>
-                                    <li><a href="{{url('edit'. '/' . 'password' . '/' . 100 . '/' . 9)}}">Change password</a></li>
-                                    {{--<li><a href="ser-single2-painting-works.html">Painting Works</a></li>--}}
-                                    <li><a href="{{url('edit'. '/' . 'configs' . '/' . 100 . '/' . 8)}}">Chang configs</a></li>
-                                    {{--<li><a href="ser-single4-water-service.html">Water Service</a></li>--}}
-                                </ul>
-                            </li>
-
+                            @auth()
+                                <li class="dropdown @yield('activePage6')"><a href="{{route('services')}}">Admin</a>
+                                    <ul>
+                                        <li><a href="{{route('services')}}">Change carousel images</a></li>
+                                        <li><a href="{{url('edit'. '/' . 'password' . '/' . 100 . '/' . 9)}}">Change password</a></li>
+                                        {{--<li><a href="ser-single2-painting-works.html">Painting Works</a></li>--}}
+                                        <li><a href="{{url('edit'. '/' . 'configs' . '/' . 100 . '/' . 8)}}">Chang configs</a></li>
+                                        <li><a href="{{url('logout')}}">Log out</a></li>
+                                        {{--<li><a href="ser-single4-water-service.html">Water Service</a></li>--}}
+                                    </ul>
+                                </li>
+                            @endauth
 
                         </ul>
                     </div>
@@ -87,7 +90,7 @@
                 <!--Start mainmenu right box-->
                 <div class="mainmenu-right-box pull-right">
                     <div class="contact-number">
-                        <h3><span class="flaticon-technology"></span>Call Us: <span>1-800-123-4567</span></h3>
+                        <h3><span class="flaticon-technology"></span>Call Us: <span>{{$configs[0]->value}}</span></h3>
                     </div>
                 </div>
                 <!--End mainmenu right box-->

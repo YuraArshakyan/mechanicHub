@@ -4,7 +4,7 @@
             <div class="col-lg-12 clearfix">
                 <!--Start logo-->
                 <div class="logo pull-left">
-                    <a href="/">
+                    <a href="{{route('home1')}}">
                         <img src="images/resources/logo.png" alt="Awesome Logo">
                     </a>
                 </div>
@@ -21,13 +21,15 @@
                     </div>
                     <div class="navbar-collapse collapse clearfix">
                         <ul class="navigation clearfix">
-                            <li class="dropdown current"><a href="index.html">Home</a>
-                                <ul>
-                                    <li><a href="{{route('home1')}}">Home One</a></li>
-                                    <li><a href="{{route('home2')}}">Home Two</a></li>
-                                    <li><a href="{{route('home3')}}">Home Three</a></li>
-                                    <li><a href="/">Home Four</a></li>
-                                </ul>
+                            <li @auth() class="dropdown @endauth current"><a href="{{route('home1')}}">Home</a>
+                                @auth()
+                                    <ul>
+                                        <li><a href="{{route('home1')}}">Home One</a></li>
+                                        <li><a href="{{route('home2')}}">Home Two</a></li>
+                                        <li><a href="{{route('home3')}}">Home Three</a></li>
+                                        <li><a href="/">Home Four</a></li>
+                                    </ul>
+                                @endauth
                             </li>
                             <li class="dropdown"><a href="about.html">About us</a>
                                 <ul>
@@ -76,17 +78,18 @@
 {{--                            </li>--}}
                             <li><a href="{{route('contact')}}">Contact Us</a></li>
 
-
-                            <li class="dropdown @yield('activePage3')"><a href="{{route('services')}}">Admin</a>
-                                <ul>
-                                    <li><a href="{{route('services')}}">Change carousel images</a></li>
-                                    <li><a href="{{url('edit'. '/' . 'password' . '/' . 100 . '/' . 9)}}">Change password</a></li>
-                                    {{--<li><a href="ser-single2-painting-works.html">Painting Works</a></li>--}}
-                                    <li><a href="{{url('edit'. '/' . 'configs' . '/' . 100 . '/' . 9)}}">Chang configs</a></li>
-                                    {{--<li><a href="ser-single4-water-service.html">Water Service</a></li>--}}
-                                </ul>
-                            </li>
-
+                            @auth()
+                                <li class="dropdown @yield('activePage3')"><a href="{{route('services')}}">Admin</a>
+                                    <ul>
+                                        <li><a href="{{route('services')}}">Change carousel images</a></li>
+                                        <li><a href="{{url('edit'. '/' . 'password' . '/' . 100 . '/' . 9)}}">Change password</a></li>
+                                        {{--<li><a href="ser-single2-painting-works.html">Painting Works</a></li>--}}
+                                        <li><a href="{{url('edit'. '/' . 'configs' . '/' . 100 . '/' . 9)}}">Chang configs</a></li>
+                                        <li><a href="{{url('logout')}}">Log out</a></li>
+                                        {{--<li><a href="ser-single4-water-service.html">Water Service</a></li>--}}
+                                    </ul>
+                                </li>
+                            @endauth()
 
                         </ul>
                     </div>
