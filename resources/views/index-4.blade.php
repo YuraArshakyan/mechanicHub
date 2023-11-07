@@ -350,7 +350,7 @@
                             </div>
                         </div>
                         <div class="text-holder text-center">
-                            <a href="gallery-single.html">New Engine Fixing</a>
+                            <a href="gallery-single.html">Engine Fixing</a>
                             <p>Engine, Repairs</p>
                         </div>
                     </div>
@@ -370,7 +370,7 @@
                             </div>
                         </div>
                         <div class="text-holder text-center">
-                            <a href="gallery-single.html">Engine Diagnostic</a>
+                            <a href="gallery-single.html">ECU programming</a>
                             <p>Diagnostics, Engine</p>
                         </div>
                     </div>
@@ -390,7 +390,7 @@
                             </div>
                         </div>
                         <div class="text-holder text-center">
-                            <a href="gallery-single.html">Wheel Alignment</a>
+                            <a href="gallery-single.html">ECU flashing</a>
                             <p>Repairs, Wheel</p>
                         </div>
                     </div>
@@ -410,7 +410,7 @@
                             </div>
                         </div>
                         <div class="text-holder text-center">
-                            <a href="gallery-single.html">Tire Reparing</a>
+                            <a href="gallery-single.html">Transmission fixing</a>
                             <p>Wheel, Diagnostics</p>
                         </div>
                     </div>
@@ -431,7 +431,7 @@
                             </div>
                         </div>
                         <div class="text-holder text-center">
-                            <a href="gallery-single.html">Free Oil Changing</a>
+                            <a href="gallery-single.html">Oil Changing</a>
                             <p>Wheel, Diagnostics</p>
                         </div>
                     </div>
@@ -451,7 +451,7 @@
                             </div>
                         </div>
                         <div class="text-holder text-center">
-                            <a href="gallery-single.html">Tire Reparing</a>
+                            <a href="gallery-single.html">Car diagnostic</a>
                             <p>Repairs, Wheel</p>
                         </div>
                     </div>
@@ -471,7 +471,7 @@
                             </div>
                         </div>
                         <div class="text-holder text-center">
-                            <a href="gallery-single.html">Tubeles Wheel Fix</a>
+                            <a href="gallery-single.html">Air-conditioner fixing</a>
                             <p>Diagnostics, Engine</p>
                         </div>
                     </div>
@@ -491,7 +491,7 @@
                             </div>
                         </div>
                         <div class="text-holder text-center">
-                            <a href="gallery-single.html">Car Washing</a>
+                            <a href="gallery-single.html">Suspension fixing</a>
                             <p>Engine, Repairs</p>
                         </div>
                     </div>

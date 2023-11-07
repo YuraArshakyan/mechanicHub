@@ -52,8 +52,8 @@
                     <li class="active" data-filter=".filter-item"><span>View All</span></li>
                     <li data-filter=".diagnostics"><span>Diagnostics</span></li>
                     <li data-filter=".engine"><span>Engine</span></li>
-                    <li data-filter=".repairs"><span>Repairs</span></li>
-                    <li data-filter=".wheel"><span>Wheel Service</span></li>
+                    <li data-filter=".repairs"><span>ECU flashing</span></li>
+                    <li data-filter=".wheel"><span>Transmission fixing</span></li>
                     <li data-filter=".air"><span>Air Conditioner</span></li>
                     @auth()
                         <li><a href="">Add</a></li>

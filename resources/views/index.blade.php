@@ -102,97 +102,37 @@
             </div>
             <div class="row">
                 <!--Start single service item-->
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <div class="single-service-item text-center">
-                        <div class="icon-holder">
-                            <span class="flaticon-car-wheel"></span>
-                        </div>
-                        <div class="text-holder">
-                            <a href="ser-single1-wheel-works.html"><h3>Wheel Works</h3></a>
-                            <p>We guarantee the best price on tires and offer free services like tire rotations and flat
-                                repairs</p>
-                        </div>
-                    </div>
-                </div>
                 <!--End single service item-->
                 <!--Start single service item-->
                 <!--End single service item-->
                 <!--Start single service item-->
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                @foreach($services as $service)
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="single-service-item text-center">
-                        <div class="icon-holder">
-                            <span class="flaticon-air-conditioner"></span>
-                        </div>
+                        <div class="icon-holder"></div>
                         <div class="text-holder">
-                            <a href="ser-single3-air-conditioner.html"><h3>Air Conditioner</h3></a>
-                            <p>A car cooler is an auto mobile window evaporative cooler, sometimes as a swamp
-                                cooler.</p>
+                            <a href="ser-single3-air-conditioner.html"><h3>{{$service->title}}</h3></a>
                         </div>
                     </div>
                 </div>
+                    @if($service->id % 3 == 0 && $service->id != 6)
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="hr-line"></div>
+                            </div>
+                        </div>
+                    @endif
+                @endforeach
                 <!--End single service item-->
             </div>
             <div class="row">
-                <div class="col-md-12">
-                    <div class="hr-line"></div>
-                </div>
-            </div>
-            <div class="row">
                 <!--Start single service item-->
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="single-service-item text-center">
-                        <div class="icon-holder">
-                            <span class="flaticon-engine"></span>
-                        </div>
-                        <div class="text-holder">
-                            <a href="ser-single5-engine-works.html"><h3>Engine Works</h3></a>
-                            <p>Engine Service is an auto mobile window and talent and high quality paint and
-                                materials.</p>
-                        </div>
-                    </div>
-                </div>
                 <!--End single service item-->
                 <!--Start single service item-->
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="single-service-item text-center">
-                        <div class="icon-holder">
-                            <span class="flaticon-essential-oil"></span>
-                        </div>
-                        <div class="text-holder">
-                            <a href="ser-single6-lube-oil-filters.html"><h3>lube Oil & Filters</h3></a>
-                            <p>Oil carries away much of your engine's heat standard cooling, it also plays a key role in
-                                cooling.</p>
-                        </div>
-                    </div>
-                </div>
                 <!--End single service item-->
                 <!--Start single service item-->
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="single-service-item text-center">
-                        <div class="icon-holder">
-                            <span class="flaticon-disc-brake"></span>
-                        </div>
-                        <div class="text-holder">
-                            <a href="ser-single7-lube-oil-filters.html"><h3>Brake Repairs</h3></a>
-                            <p>Brake hoses transfer the brake from the master cylinder to the brake calipers or wheel
-                                cylinders.</p>
-                        </div>
-                    </div>
-                </div>
                 <!--End single service item-->
                 <!--Start single service item-->
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="single-service-item text-center">
-                        <div class="icon-holder">
-                            <span class="flaticon-timing-belt"></span>
-                        </div>
-                        <div class="text-holder">
-                            <a href="ser-single8-belts-hoses.html"><h3>Belts & Hoses</h3></a>
-                            <p>Our mechanic to inspect the brake hoses every time you get a tire rotation or brake
-                                service.</p>
-                        </div>
-                    </div>
-                </div>
                 <!--End single service item-->
             </div>
         </div>

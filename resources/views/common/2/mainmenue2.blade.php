@@ -43,14 +43,14 @@
                             <li class="dropdown"><a href="{{route('services')}}">Services</a>
                                 <ul>
                                     <li><a href="{{route('services')}}">View All Services</a></li>
-                                    <li><a href="{{route('ser-single', 1)}}">Wheel Works</a></li>
-                                    {{--                                    <li><a href="ser-single2-painting-works.html">Painting Works</a></li>--}}
-                                    <li><a href="{{route('ser-single', 3)}}">Air Conditioner</a></li>
-                                    {{--                                    <li><a href="ser-single4-water-service.html">Water Service</a></li>--}}
-                                    <li><a href="{{route('ser-single', 5)}}">Engine Works</a></li>
-                                    <li><a href="{{route('ser-single', 6)}}">lube Oil & Filters</a></li>
-                                    <li><a href="{{route('ser-single', 7)}}">Brake Repairs</a></li>
-                                    <li><a href="{{route('ser-single', 8)}}">Belts & Hoses</a></li>
+                                    <li><a href="{{route('ser-single', 1)}}">Engine Fixing</a></li>
+                                    {{--                                <li><a href="ser-single2-painting-works.html">Painting Works</a></li>--}}
+                                    <li><a href="{{route('ser-single', 3)}}">ECU programming</a></li>
+                                    {{--                                <li><a href="ser-single4-water-service.html">Water Service</a></li>--}}
+                                    <li><a href="{{route('ser-single', 5)}}">ECU flashing</a></li>
+                                    <li><a href="{{route('ser-single', 6)}}">Transmission fixing</a></li>
+                                    <li><a href="{{route('ser-single', 7)}}">Oil Changing</a></li>
+                                    <li><a href="{{route('ser-single', 8)}}">Car diagnostic</a></li>
                                 </ul>
                             </li>
                             <li><a href="{{route('gallery')}}">Gallery</a></li>

@@ -26,10 +26,11 @@ use App\Http\Controllers\appointment;
 */
 
 Route::get('index', function () {
+    $services = services::all();
     $configs = configs::all();
     $texts = texts::where('team', 1)->get();
     $carousel = carousel_imgs::where('team', 1)->get();
-    return view('index', compact('carousel', 'texts', 'configs'));
+    return view('index', compact('carousel', 'texts', 'configs', 'services'));
 })->name('home1');
 
 Route::get('index2', function () {

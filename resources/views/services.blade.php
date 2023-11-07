@@ -50,7 +50,7 @@
             <div class="row">
                 @foreach($services as $service)
                     <!--Start single service item-->
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                         <div class="single-service-item text-center">
                             <div class="img-holder">
                                 <img src="images/services/{{$service->photo}}" alt="Awesome Image" style="width: 270px; height: 200px;">
@@ -72,7 +72,7 @@
                         </div>
                     </div>
                     <!--End single service item-->
-                    @if($service->id % 4 == 0 && $service->id != $max_id)
+                    @if($service->id % 3 == 0 && $service->id != $max_id)
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="hr-line"></div>
