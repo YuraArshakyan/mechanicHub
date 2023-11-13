@@ -457,7 +457,7 @@
                             </div>
                             <div class="client-info">
                                 <div class="name">
-                                    <h3>E. Douglas - <span>London</span></h3>
+                                    <h3>E. Douglas - <span>Canoga Park</span></h3>
                                     <div class="review-box">
                                         <ul>
                                             <li><i class="fa fa-star"></i></li>
@@ -483,7 +483,7 @@
                             </div>
                             <div class="client-info">
                                 <div class="name">
-                                    <h3>E. Douglas - <span>London</span></h3>
+                                    <h3>E. Douglas - <span>Winnetka</span></h3>
                                     <div class="review-box">
                                         <ul>
                                             <li><i class="fa fa-star"></i></li>
@@ -509,7 +509,7 @@
                             </div>
                             <div class="client-info">
                                 <div class="name">
-                                    <h3>E. Douglas - <span>London</span></h3>
+                                    <h3>E. Douglas - <span>Northridge</span></h3>
                                     <div class="review-box">
                                         <ul>
                                             <li><i class="fa fa-star"></i></li>
